@@ -837,6 +837,29 @@ body > .nav.open{max-height:calc(100svh - 32px);overflow-y:auto}
 body > .nav .nav-links a,
 body > .nav .nav-links a:is(:hover,:focus-visible,:active,[aria-current="location"]),
 body > .nav .burger{color:#fff}
+
+/* Estrella de Educación recorriendo su línea vertical */
+#educacion .edu-block .star{top:6px;animation:education-star-travel 4s ease-in-out infinite}
+@keyframes education-star-travel{0%,100%{top:6px}50%{top:calc(100% - 38px)}}
+@media(prefers-reduced-motion:reduce){#educacion .edu-block .star{animation:none}}
+
+
+/* Números de Habilidades con aparición progresiva */
+#habilidades.numbers-ready .skill .num{opacity:0}
+#habilidades.numbers-visible .skill .num{animation:skill-number-fade .85s ease both;animation-delay:var(--number-delay,0s)}
+#habilidades .skill:nth-child(1){--number-delay:0s}
+#habilidades .skill:nth-child(2){--number-delay:.25s}
+#habilidades .skill:nth-child(3){--number-delay:.5s}
+#habilidades .skill:nth-child(4){--number-delay:.75s}
+@keyframes skill-number-fade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){#habilidades.numbers-ready .skill .num{opacity:1;animation:none}}
+
+
+/* Invitación de contacto */
+#contacto .contact-invitation{font-family:Arial,Helvetica,sans-serif;font-size:clamp(22px,3vw,38px);font-weight:700;line-height:1.3;color:#fff;text-align:center;margin:28px 0 0;text-wrap:balance}
+@media(max-width:600px){#contacto .contact-invitation{margin-top:20px}}
+
+
 </style>
 </head>
 <body>
@@ -908,10 +931,10 @@ body > .nav .burger{color:#fff}
 <p class="eyebrow" style="color:var(--sky)">Capacidades</p>
 <h2 class="sec-title" id="t-sk">Habilidades</h2>
 <div class="skills">
-<div class="skill reveal"><div class="num">01</div><div class="cat">Identidad visual</div><div class="bar"></div></div>
-<div class="skill reveal"><div class="num">02</div><div class="cat">Publicidad</div><div class="bar"></div></div>
-<div class="skill reveal"><div class="num">03</div><div class="cat">Editorial</div><div class="bar"></div></div>
-<div class="skill reveal"><div class="num">04</div><div class="cat">Digital / 3D</div><div class="bar"></div></div>
+<div class="skill"><div class="num">01</div><div class="cat">Identidad visual</div><div class="bar"></div></div>
+<div class="skill"><div class="num">02</div><div class="cat">Publicidad</div><div class="bar"></div></div>
+<div class="skill"><div class="num">03</div><div class="cat">Editorial</div><div class="bar"></div></div>
+<div class="skill"><div class="num">04</div><div class="cat">Digital / 3D</div><div class="bar"></div></div>
 </div>
 
 </div></section>
@@ -959,14 +982,14 @@ body > .nav .burger{color:#fff}
 <img src="assets/img/EDITORIAL/HELVETICA/HELVETICA%201@300x.png" alt="Helvética — pieza 1" loading="lazy" data-imgs='["assets/img/EDITORIAL/HELVETICA/HELVETICA%201@300x.png","assets/img/EDITORIAL/HELVETICA/HELVETICA%202@300x.png"]'>
 <div class="ov"><b>Helvética</b><small>Editorial · 2 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
 <p class="meta">Helvética · Editorial</p></article>
-<article class="proj reveal" data-cat="3d" data-title="Lego City Space Stand" data-desc="Se diseñó un stand de LEGO City Space para que tanto chicos como grandes pudieran interactuar en él. Cuenta con diferentes áreas aptas para todo tipo de público. La paleta cromática utiliza tonos morados y azules para transmitir la esencia del espacio.">
-<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png" alt="Lego City Space Stand — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%205@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/Recurso%2033@300x.png"]'>
-<div class="ov"><b>Space Stand</b><small>Modelado 3D · 6 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
-<p class="meta">Space Stand · Modelado 3D</p></article>
-<article class="proj reveal" data-cat="3d" data-title="Lego City Space" data-desc="A partir del stand de LEGO City Space, se realizó un personaje para crear un anuncio publicitario de un producto del mismo stand. En este caso, la paleta cromática se modificó hacia tonos azules, conservando parte de la esencia visual del proyecto anterior.">
-<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png" alt="Lego City Space — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%205@300x.png"]'>
-<div class="ov"><b>City Space</b><small>Modelado 3D · 5 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
-<p class="meta">City Space · Modelado 3D</p></article>
+<article class="proj reveal" data-cat="3d" data-title="LEGO City Space Stand" data-desc="Se diseñó un stand de LEGO City Space para que tanto chicos como grandes pudieran interactuar en él. Cuenta con diferentes áreas aptas para todo tipo de público. La paleta cromática utiliza tonos morados y azules para transmitir la esencia del espacio.">
+<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png" alt="LEGO City Space Stand — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%205@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/Recurso%2033@300x.png"]'>
+<div class="ov"><b>LEGO City Space Stand</b><small>Modelado 3D · 6 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">LEGO City Space Stand · Modelado 3D</p></article>
+<article class="proj reveal" data-cat="3d" data-title="Personaje City Space" data-desc="A partir del stand de LEGO City Space, se realizó un personaje para crear un anuncio publicitario de un producto del mismo stand. En este caso, la paleta cromática se modificó hacia tonos azules, conservando parte de la esencia visual del proyecto anterior.">
+<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png" alt="Personaje City Space — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%205@300x.png"]'>
+<div class="ov"><b>Personaje City Space</b><small>Modelado 3D · 5 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Personaje City Space · Modelado 3D</p></article>
 </div>
 </div></section>
 <section id="educacion" aria-labelledby="t-edu"><div class="wrap reveal">
@@ -1094,6 +1117,15 @@ body > .nav .burger{color:#fff}
     window.scrollTo(0,0);document.getElementById('detail-title').focus({preventScroll:true});
   }
   window.addEventListener('hashchange',routeProject);routeProject();
+  // Fade in consecutivo al entrar en Habilidades.
+  var skillsSection=document.getElementById('habilidades');
+  if('IntersectionObserver' in window&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    skillsSection.classList.add('numbers-ready');
+    var skillsObserver=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){if(entry.isIntersecting){skillsSection.classList.add('numbers-visible');skillsObserver.disconnect();}});
+    },{threshold:.15});
+    skillsObserver.observe(skillsSection);
+  }
   // Reveal
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
