@@ -1,220 +1,108 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M.ROSALES — Sistema de Diseño</title>
-<style>
-:root{
-  --intense:#000B79; --electric:#3C66FE; --sky:#7CB5FB;
-  --night:#16113C; --white:#FEFEFE; --black:#000000;
-  --display:"Arial Black",Arial,sans-serif; --body:Arial,Helvetica,sans-serif;
-  --r-none:0px; --r-sm:4px; --r-md:8px; --r-pill:999px;
-  --sh-hover:0 8px 24px rgba(22,17,60,.16); --sh-deep:0 16px 48px rgba(22,17,60,.22);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--body);background:var(--white);color:var(--black);line-height:1.5}
-.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-.tag{font-family:var(--display);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--electric);margin-bottom:8px}
-/* NAV */
-.nav{background:var(--intense);color:var(--white);position:sticky;top:0;z-index:50}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 24px;flex-wrap:wrap}
-.brand{font-family:var(--display);text-transform:uppercase;font-size:18px}
-.brand span{color:var(--sky)}
-.nav nav{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-.nav-btns a{color:var(--white);background:var(--electric);border:2px solid var(--electric);border-radius:999px;font-weight:700;font-size:13px;text-transform:uppercase;text-decoration:none;padding:8px 18px;transition:background .15s,color .15s,transform .1s}
-.nav-btns a:hover{background:var(--white);border-color:var(--white);color:var(--electric)}
-.nav-btns a:active{background:var(--sky);border-color:var(--sky);color:var(--night);transform:scale(.96)}
-.nav-btns a:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
-/* HERO */
-.hero{background:var(--intense) url("assets/img/fondo%20encabezado.png") center/cover no-repeat;color:var(--white);padding:88px 0 72px;position:relative;overflow:hidden}
-.hero h1{font-family:var(--display);text-transform:uppercase;line-height:.88;margin:0}
-.hero-solid{display:block;color:var(--white);font-size:clamp(56px,10vw,138px);letter-spacing:-.01em}
-.hero-outline-row{display:flex;align-items:center;gap:22px;margin-top:2px}
-.hero-outline{color:transparent;-webkit-text-stroke:2.5px var(--sky);font-size:clamp(56px,10vw,138px);letter-spacing:-.01em;line-height:.9;white-space:nowrap}
-.hero-star{color:var(--sky);font-size:clamp(56px,8vw,110px);line-height:1;transform:rotate(12deg)}
-.hero-name{font-family:var(--display);text-transform:uppercase;color:var(--sky);font-size:clamp(24px,4.4vw,54px);line-height:1.02;margin:26px 0 0}
-.hero-sub{font-family:var(--body);text-transform:uppercase;letter-spacing:.14em;color:var(--sky);font-size:clamp(12px,1.8vw,17px);margin-top:12px}
-.hero p{max-width:680px;margin-top:20px;font-size:17px;line-height:26px}
-.hero .meta{margin-top:20px;font-size:13px;color:var(--sky)}
-.hero img.star{position:absolute;right:48px;top:32px;width:120px}
-section.block{padding:64px 0;border-top:1px solid #e5e5e5}
-h2.sec{font-family:var(--display);text-transform:uppercase;font-size:clamp(28px,4vw,40px);line-height:1.05;margin-bottom:6px}
-p.lead{color:#444;max-width:760px;margin-bottom:28px;font-size:16px}
-/* COLORS */
-.grid-colors{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
-.swatch{border:1px solid #ddd;border-radius:var(--r-sm);overflow:hidden;background:#fff}
-.swatch .c{height:120px;display:flex;align-items:flex-end;padding:10px}
-.swatch .c code{background:rgba(255,255,255,.9);font-size:12px;padding:2px 8px;border-radius:var(--r-pill);color:#000}
-.swatch .t{padding:16px}
-.swatch .t b{font-family:var(--display);font-size:13px;text-transform:uppercase;display:block;margin-bottom:6px}
-.swatch .t small{font-size:13px;color:#555}
-/* TYPE */
-.trow{border:1px solid #ddd;border-radius:var(--r-sm);background:#fff;padding:22px;margin-bottom:12px}
-.trow span.lbl{font-size:12px;text-transform:uppercase;color:var(--electric);font-weight:700;display:block;margin-bottom:8px}
-.t-display{font-family:var(--display);text-transform:uppercase;font-size:clamp(40px,6vw,96px);line-height:1.0}
-.t-h1{font-family:var(--display);text-transform:uppercase;font-size:clamp(32px,4.5vw,64px);line-height:1.05}
-.t-h2{font-family:var(--display);text-transform:uppercase;font-size:clamp(24px,3.5vw,40px)}
-.t-h3{font-family:var(--display);text-transform:uppercase;font-size:24px}
-.t-body{font-size:17px;line-height:26px;max-width:660px}
-.t-small{font-size:13px;color:#333}
-/* RADIUS / SHAPES */
-.rrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;margin-bottom:24px}
-.rbox{background:var(--intense);color:#fff;height:110px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-weight:700}
-.rbox small{font-weight:400;font-size:12px;opacity:.85}
-.stars{display:flex;align-items:center;gap:20px;flex-wrap:wrap;background:var(--night);color:#fff;border-radius:var(--r-sm);padding:24px;margin-top:8px}
-.stars small{font-size:12px;color:var(--sky)}
-.line{height:2px;background:var(--sky)}
-/* COMPONENTS */
-.btn{font-family:var(--display);font-size:15px;text-transform:uppercase;padding:13px 26px;border-radius:var(--r-md);border:2px solid var(--electric);display:inline-block;text-decoration:none;cursor:pointer;transition:all .2s}
-.btn-p{background:var(--electric);color:var(--white)}
-.btn-p:hover{background:var(--white);color:var(--electric);transform:translateY(-2px);box-shadow:var(--sh-hover)}
-.btn-s{background:transparent;color:var(--electric)}
-.btn-s:hover{background:var(--electric);color:var(--white)}
-.btn:focus-visible,a:focus-visible{outline:3px solid var(--electric);outline-offset:2px}
-.link-demo{margin-top:14px;font-size:16px}
-.link-demo a{color:var(--electric);font-weight:700}
-.link-demo a:hover{color:var(--intense);text-decoration:underline}
-.proj{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px}
-.p{border-radius:var(--r-none);overflow:hidden;border:1px solid #ddd;position:relative;background:#fff}
-.p img{width:100%;height:230px;object-fit:cover;display:block;transition:transform .3s}
-.p:hover img{transform:scale(1.04)}
-.p .ov{position:absolute;inset:0;background:rgba(22,17,60,.88);color:#fff;opacity:0;transition:opacity .25s;display:flex;flex-direction:column;justify-content:center;padding:24px}
-.p:hover .ov,.p:focus-within .ov{opacity:1}
-.p .ov b{font-family:var(--display);text-transform:uppercase;font-size:18px}
-.p .ov small{color:var(--sky);margin:6px 0 14px}
-.p .meta{padding:14px}
-.p .meta b{font-family:var(--display);font-size:13px;text-transform:uppercase}
-.p .meta small{display:block;color:#666;font-size:12px;margin-top:4px}
-.sep{background:var(--night);color:var(--white);padding:72px 0;position:relative;overflow:hidden;margin-top:28px;border-radius:var(--r-sm)}
-.sep h3{font-family:var(--display);text-transform:uppercase;font-size:clamp(40px,6vw,72px);position:relative;z-index:1}
-.sep .ghost{position:absolute;top:50%;left:24px;transform:translateY(-50%);font-family:var(--display);text-transform:uppercase;font-size:clamp(64px,10vw,130px);color:transparent;-webkit-text-stroke:2px var(--sky);opacity:.55;white-space:nowrap;pointer-events:none}
-.sep p{position:relative;z-index:1;color:#d8dbff;max-width:640px;margin-top:8px}
-/* 03 FIGMA-LIKE */
-.fig-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(34px,5.5vw,64px);line-height:1.05;color:#000}
-.fig-sub{color:#555;font-size:17px;margin:14px 0 34px;max-width:900px}
-.fig-bars{display:flex;align-items:flex-end;gap:22px;flex-wrap:wrap;margin-bottom:34px}
-.fig-bar{background:#3C66FE;color:#fff;font-weight:700;font-size:15px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:10px;width:132px}
-.fig-radios{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-bottom:8px}
-.fig-radio-box{background:#000B79;color:#fff;font-weight:800;font-size:22px;display:flex;align-items:center;justify-content:center;height:180px}
-.fig-cap{font-size:15px;color:#111;margin-top:10px}
-.fig-stars{display:flex;align-items:center;gap:28px;flex-wrap:wrap;margin-top:44px}
-.fig-star-item{display:flex;align-items:center;gap:14px;font-size:15px;color:#111}
-.fig-foot{margin-top:44px;font-size:15px;color:#111}
-.fig-line{height:3px;background:#7CB5FB;width:320px;margin-top:12px}
-.fig-bigstar{margin-left:auto;width:130px;transform:rotate(12deg)}
-@media(max-width:800px){.fig-radios{grid-template-columns:1fr}.fig-bar{width:100px}.fig-bigstar{margin-left:0}}
-/* DOS */
-.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
-.do{background:#f2f6ff;border:1px solid #c9d8ff;border-radius:var(--r-sm);padding:22px}
-.dont{background:#fff4f4;border:1px solid #f0caca;border-radius:var(--r-sm);padding:22px}
-.do h3,.dont h3{font-family:var(--display);font-size:15px;text-transform:uppercase;margin-bottom:10px}
-.do li,.dont li{font-size:14px;margin-bottom:6px;margin-left:18px}
-footer{background:var(--intense);color:#fff;padding:28px 0;font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:700px){.hero img.star{display:none}.t-display{font-size:40px}}
-</style>
-</head>
-<body>
-
-<header class="nav"><div class="wrap">
-<div class="brand">★ M.ROSALES</div>
-<nav class="nav-btns">
-<a href="#colores">Colores</a><a href="#tipo">Tipografía</a><a href="#formas">Formas</a><a href="#componentes">Componentes</a><a href="#reglas">Sí / No</a>
-</nav></div></header>
-
-<div class="hero"><div class="wrap">
-<h1><span class="hero-solid">Portafolio</span><span class="hero-outline-row"><span class="hero-outline">2026.</span></span></h1>
-<img src="assets/img/margen_encabezado.png" alt="Margen decorativo del encabezado" style="width:100%;height:auto;display:block;margin:18px 0 6px">
-<div class="hero-name">Mireille Abigail<br>Sánchez Rosales</div>
-<div class="hero-sub">Portafolio 2026 · Sistema de diseño</div>
-<p>Identidad creativa, enérgica, contemporánea y segura. Editorial + tipografía gigante + contrastes azul/blanco + estrellas de 5 puntas como hilo conductor. Cada proyecto es el protagonista.</p>
-<div class="meta">Base #000B79 + #FEFEFE · Interactivo #3C66FE · Arial Black + Arial · Radios 0/4/8px · Plano</div>
-</div></div>
-
-<div class="wrap">
-
-<section class="block" id="colores">
-<div class="tag">01 · Colores y su rol</div>
-<h2 class="sec">Paleta de azules + neutros</h2>
-<p class="lead">El azul es la identidad. Combinación principal <b>#000B79 + #FEFEFE</b>. El eléctrico <b>#3C66FE</b> identifica toda acción. El claro solo detalles. El noche da profundidad.</p>
-<div class="grid-colors">
-<div class="swatch"><div class="c" style="background:#000B79"><code>#000B79</code></div><div class="t"><b>Azul intenso — principal</b><small>Fondos, bloques gráficos, encabezados, marca. Fondo base con blanco. Token: {colors.primary} / {colors.background-brand}.</small></div></div>
-<div class="swatch"><div class="c" style="background:#3C66FE"><code>#3C66FE</code></div><div class="t"><b>Azul eléctrico — interactivo</b><small>Botones, enlaces, hovers, indicadores. Todo lo que debe destacar. Token: {colors.interactive}.</small></div></div>
-<div class="swatch"><div class="c" style="background:#7CB5FB"><code>#7CB5FB</code></div><div class="t"><b>Azul claro — acento suave</b><small>Estrellas secundarias, líneas, decorativos, palabra en contorno. Nunca superficies grandes. Token: {colors.accent-soft}.</small></div></div>
-<div class="swatch"><div class="c" style="background:#16113C"><code>#16113C</code></div><div class="t"><b>Azul noche — profundo</b><small>Fondos profundos, transiciones, separadores de categoría. Token: {colors.deep} / {colors.background-deep}.</small></div></div>
-<div class="swatch"><div class="c" style="background:#FEFEFE;border-bottom:1px solid #eee"><code style="background:#111;color:#fff">#FEFEFE</code></div><div class="t"><b>Blanco — fondo / texto sobre azul</b><small>Limpieza y equilibrio. Texto sobre azul. Token: {colors.surface-light} / {colors.text-on-dark}.</small></div></div>
-<div class="swatch"><div class="c" style="background:#000000"><code>#000000</code></div><div class="t"><b>Negro — texto sobre claro</b><small>Máximo contraste. Proyectos conservan sus colores. Token: {colors.ink} / {colors.text-on-light}.</small></div></div>
-</div>
-</section>
-
-<section class="block" id="tipo">
-<div class="tag">02 · Tipografía — Arial Black + Arial</div>
-<h2 class="sec">Escala tipográfica</h2>
-<p class="lead">Solo dos familias. Arial Black para impacto, siempre en mayúsculas. Arial Regular para leer. Arial Bold/Black 14–16px para navegación y botones.</p>
-<div class="trow"><span class="lbl">Display · Black MAYÚS 80–120px / 85–110px · {typography.display}</span><div class="t-display">Palabra protagonista</div></div>
-<div class="trow"><span class="lbl">H1 · Black 56–72px MAYÚS</span><div class="t-h1">Título de proyecto</div></div>
-<div class="trow"><span class="lbl">H2 · Black 36–48px</span><div class="t-h2">Título secundario</div></div>
-<div class="trow"><span class="lbl">H3 · Black 22–28px</span><div class="t-h3">Subtítulo de sección</div></div>
-<div class="trow"><span class="lbl">Body · Arial Regular 16–18px / 24–28px</span><div class="t-body">Descripciones de proyectos, procesos y sobre mí. Legibilidad primero, párrafos con aire y mucho espacio negativo.</div></div>
-<div class="trow"><span class="lbl">Small 13–14px · Botones / Nav Bold o Black 14–16px MAYÚS</span><div class="t-small" style="font-family:var(--display);text-transform:uppercase">Categoría · 2026 · Etiqueta · Ver proyecto</div></div>
-</section>
-
-<section class="block" id="formas">
-<h2 class="fig-title">03 — Espaciado / Radios / Formas</h2>
-<p class="fig-sub">Escala: 8 · 16 · 24–32 · 48–64 · 96–140px. Contenedor máx. 1600px, rejilla 12 columnas.</p>
-<div class="fig-bars">
-<div class="fig-bar" style="height:38px">8</div>
-<div class="fig-bar" style="height:58px">16</div>
-<div class="fig-bar" style="height:86px">24</div>
-<div class="fig-bar" style="height:112px">32</div>
-<div class="fig-bar" style="height:148px">48–64</div>
-<div class="fig-bar" style="height:198px">96–140</div>
-</div>
-<div class="fig-radios">
-<div><div class="fig-radio-box" style="border-radius:0">0px</div><div class="fig-cap">Defecto: imágenes, bloques</div></div>
-<div><div class="fig-radio-box" style="border-radius:4px">4px</div><div class="fig-cap">Interactivos pequeños</div></div>
-<div><div class="fig-radio-box" style="border-radius:8px">8px</div><div class="fig-cap">Máx. botones / etiquetas</div></div>
-</div>
-<div class="fig-stars">
-<div class="fig-star-item"><span style="font-size:48px;line-height:1;color:#3C66FE">★</span>48px principal</div>
-<div class="fig-star-item"><span style="font-size:32px;line-height:1;color:#7CB5FB">★</span>32px secundaria</div>
-<div class="fig-star-item"><span style="font-size:24px;line-height:1;color:#7CB5FB">★</span>24px</div>
-<div class="fig-star-item"><span style="font-size:16px;line-height:1;color:#3C66FE">★</span>16px indicador</div>
-<img class="fig-bigstar" src="assets/img/estrella_azul.png" alt="Estrella grande de fondo">
-</div>
-<div class="fig-foot">80–120px fondo (sin competir)<div class="fig-line"></div></div>
-</section>
-
-<section class="block" id="componentes">
-<div class="tag">04 · Componentes</div>
-<h2 class="sec">Botones, tarjetas y separadores</h2>
-<p class="lead">Plano por defecto, sombra solo en interacción. Imagen siempre protagonista, sin marco uniforme.</p>
-<p><a class="btn btn-p" href="#componentes">Botón principal</a>
-<a class="btn btn-s" href="#componentes" style="margin-left:12px">Botón secundario</a></p>
-<p class="link-demo">Enlace: <a href="#componentes">azul eléctrico identificable</a> · hover azul intenso + subrayado · foco con anillo de 3px.</p>
-<div class="proj">
-<article class="p"><img src="assets/img/lapi_1.png" alt="Proyecto Lapi 1"><div class="ov"><b>Nombre del proyecto</b><small>Marca · 2026</small><span class="btn btn-p" style="align-self:flex-start">Ver proyecto</span></div><div class="meta"><b>Lapi 1</b><small>Hover: zoom + overlay con nombre, categoría, año y CTA</small></div></article>
-<article class="p"><img src="assets/img/lapi_2.png" alt="Proyecto Lapi 2"><div class="ov"><b>Nombre del proyecto</b><small>Editorial · 2026</small><span class="btn btn-p" style="align-self:flex-start">Ver proyecto</span></div><div class="meta"><b>Lapi 2</b><small>Imagen limpia por defecto, radio 0, sin sombra</small></div></article>
-<article class="p"><img src="assets/img/publi_skydancers.png" alt="Proyecto Skydancers"><div class="ov"><b>Skydancers</b><small>Publicidad · 2026</small><span class="btn btn-p" style="align-self:flex-start">Ver proyecto</span></div><div class="meta"><b>Skydancers</b><small>Publicidad</small></div></article>
-</div>
-<div class="sep"><div class="wrap" style="position:relative"><div class="ghost">MARCA</div><h3>Marca</h3><p>Separador de categoría: fondo azul profundo + título blanco gigante + misma palabra en contorno claro detrás. Sin overflow horizontal.</p></div></div>
-</section>
-
-<section class="block" id="reglas">
-<div class="tag">05 · Reglas</div>
-<h2 class="sec">Sí / No</h2>
-<div class="two">
-<div class="do"><h3>Sí</h3><ul>
-<li>Azul protagonista</li><li>Títulos grandes en mayúsculas</li><li>Imagen primero, layout editorial variado</li><li>Estrellas con medida</li><li>Alto contraste azul/blanco</li><li>Espacio negativo</li><li>Animaciones sencillas</li><li>Consistencia entre categorías</li>
-</ul></div>
-<div class="dont"><h3>No</h3><ul>
-<li>Identidad que compita con proyectos</li><li>Colores extra fuera de paleta</li><li>Exceso de estrellas o texturas ilegibles</li><li>Degradados sin función</li><li>Abuso de sombras</li><li>Tarjetas redondeadas</li><li>Todo del mismo tamaño</li><li>Animaciones que bloqueen</li><li>Mucho texto sobre imagen</li>
-</ul></div>
-</div>
-</section>
-
-</div>
-<footer><div class="wrap"><span>★ M.ROSALES — #000B79 + #FEFEFE · #3C66FE interactivo · Arial Black + Arial</span><span>design.html · 1 página</span></div></footer>
-</body>
-</html>
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MSR — Sistema de diseño actualizado</title><style>
+:root{--bg:#050505;--surface:#090c1a;--blue:#174bff;--soft:#7299ff;--text:#eeeeef;--line:#ffffff25}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:17px/1.65 Arial,Helvetica,sans-serif}h1,h2,h3{line-height:1.1}h2,h3,.eyebrow{font-family:'Arial Black',Arial,sans-serif}h2{font-size:clamp(28px,4vw,48px);text-transform:uppercase;margin:0 0 24px}h3{font-size:18px}a{color:#7cb5fb}button,a{touch-action:manipulation}button,.nav a,.action{font:700 14px Arial;color:var(--text);background:#070d27;border:1px solid #ffffff35;border-radius:24px;padding:12px 20px;text-decoration:none;display:inline-block;cursor:pointer;transition:.2s}.nav a:hover,button:hover,.action:hover,button[aria-pressed=true],:focus-visible{border-color:var(--soft);box-shadow:0 0 0 1px var(--soft),0 0 10px #3c66feaa,0 0 24px #174bff77;outline-offset:4px}header{position:sticky;top:0;z-index:20;background:#050610ed;backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{max-width:1440px;margin:auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px}.nav strong{letter-spacing:.12em}.nav nav{display:flex;gap:8px;flex-wrap:wrap}.container{max-width:1440px;margin:auto;padding:0 clamp(20px,4vw,64px)}.hero{background:#07134d url('assets/img/fondo%20encabezado.png') center/cover;min-height:65vh;display:grid;align-items:center;padding:80px 0}.eyebrow{color:var(--soft);font-size:12px;letter-spacing:.14em;text-transform:uppercase}.hero h1{font-family:'Times New Roman',serif;font-size:clamp(64px,10vw,140px);margin:14px 0;letter-spacing:-.045em;text-shadow:0 0 8px #fff8,0 0 25px #a6c3ff88;animation:led 4.8s ease-in-out infinite}.hero p{max-width:660px}.hero .eyebrow{color:#7cb5fb}.section{padding:80px 0;border-bottom:1px solid var(--line);scroll-margin-top:110px}.intro{max-width:800px;color:#c2c8dc}.badge{display:inline-block;color:#7cb5fb;border:1px solid #7299ff55;padding:5px 12px;border-radius:20px;font-size:12px}.swatches{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px}.swatch{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--surface);padding-bottom:18px}.swatch>div{height:120px;border-bottom:1px solid var(--line)}.swatch h3,.swatch code{margin:16px 14px 0;display:block;font-size:14px}.columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.panel{padding:28px;background:var(--surface);border:1px solid var(--line);border-radius:18px}.panel p{color:#bec4d4}.type-display{font-family:'Arial Black',Arial,sans-serif;font-size:clamp(32px,5vw,60px);font-weight:900;line-height:1.05}.type-serif{font-family:'Times New Roman',serif;font-size:clamp(44px,7vw,90px);line-height:1}.type-number{font-family:Impact,'Arial Narrow',sans-serif;font-size:80px;color:var(--blue)}.shape-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.shape{height:150px;border:1px solid #7299ff88;background:#07134d;display:grid;place-items:center}.star{display:block;width:88px;height:88px;background:#174bff;clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}.divider{display:flex;align-items:center;gap:14px;color:white;font-size:36px}.divider:before,.divider:after{content:'';height:1px;background:#7cb5fb;flex:1}.demo-row{display:flex;gap:12px;flex-wrap:wrap;margin:20px 0}.glow-card{transition:.25s}.glow-card:hover,.glow-card:focus-visible{transform:translateY(-6px);border-color:#7299ff;box-shadow:0 0 20px #174bff66}.grid-demo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.grid-demo .piece{margin:0;background:#090c1a;border:1px solid var(--line);border-radius:12px;overflow:hidden}.piece .art{aspect-ratio:1;background:radial-gradient(circle at center,#174bff44,transparent 65%),#090c1a;display:grid;place-items:center}.piece figcaption{padding:16px;font-size:14px}.rules{display:grid;grid-template-columns:1fr 1fr;gap:24px}.rules li{margin:10px 0}details{border:1px solid var(--line);padding:18px 24px;border-radius:12px;margin-top:20px}summary{cursor:pointer;color:#a6c3ff}pre{white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.6 ui-monospace,monospace;max-height:650px;overflow:auto;background:#02030b;padding:24px;border-radius:10px}.doc-copy{max-width:900px}.doc-copy p{color:#c2c8dc}.doc-copy h3{color:#7cb5fb;margin-top:40px}.footer{padding:30px 0;font-size:13px;color:#aeb4c5}@keyframes led{0%,25%,55%,100%{text-shadow:0 0 8px #fff8,0 0 25px #a6c3ff88}35%,45%{text-shadow:none}}@media(max-width:1023px){.swatches{grid-template-columns:repeat(3,1fr)}.grid-demo{grid-template-columns:repeat(2,1fr)}}@media(max-width:599px){.nav{align-items:flex-start;flex-direction:column;gap:12px}.nav a{padding:9px 12px;font-size:12px}.section{padding:48px 0;scroll-margin-top:170px}.columns,.shape-grid,.rules,.grid-demo{grid-template-columns:1fr}.swatches{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{padding:60px 0}.panel{padding:22px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}.glow-card:hover{transform:none}}
+</style></head><body><header><div class="nav"><strong>MSR · DESIGN</strong><nav aria-label="Secciones del sistema"><a href="#colores">Colores</a><a href="#tipografia">Tipografía</a><a href="#formas">Formas</a><a href="#componentes">Componentes</a><a href="#reglas">Sí / No</a></nav></div></header><main>
+<section class="hero"><div class="container"><p class="eyebrow">Sistema de diseño · 19 de octubre de 2026</p><h1>MSR / DESIGN</h1><p>Editorial, nocturno y eléctrico. La identidad de Mireille Abigail Sánchez Rosales, documentada desde el Word actualizado y el portafolio actual.</p><span class="badge">Fuente: DESIGN_Mireille.docx</span></div></section>
+<section class="section" id="colores"><div class="container"><p class="eyebrow">01 · Identidad y aplicación</p><h2>Colores</h2><p class="intro">La paleta original define la marca; los colores activos describen la interfaz oscura. Los proyectos conservan sus colores originales.</p><h3>Paleta de marca</h3><div class="swatches"><article class="swatch"><div style="background:#000B79"></div><h3>Azul intenso</h3><code>#000B79</code></article><article class="swatch"><div style="background:#3C66FE"></div><h3>Azul eléctrico</h3><code>#3C66FE</code></article><article class="swatch"><div style="background:#7CB5FB"></div><h3>Azul claro</h3><code>#7CB5FB</code></article><article class="swatch"><div style="background:#16113C"></div><h3>Azul noche</h3><code>#16113C</code></article><article class="swatch"><div style="background:#FEFEFE"></div><h3>Blanco</h3><code>#FEFEFE</code></article><article class="swatch"><div style="background:#000000"></div><h3>Negro</h3><code>#000000</code></article></div><h3 style="margin-top:40px">Superficies y colores activos</h3><div class="swatches"><article class="swatch"><div style="background:#050505"></div><h3>Fondo</h3><code>#050505</code></article><article class="swatch"><div style="background:#050610"></div><h3>Profundo</h3><code>#050610</code></article><article class="swatch"><div style="background:#090B16"></div><h3>Superficie</h3><code>#090B16</code></article><article class="swatch"><div style="background:#090C1A"></div><h3>Proyecto</h3><code>#090C1A</code></article><article class="swatch"><div style="background:#174BFF"></div><h3>Interacción</h3><code>#174BFF</code></article><article class="swatch"><div style="background:#EEEEEF"></div><h3>Texto</h3><code>#EEEEEF</code></article></div><p class="intro">Acentos complementarios: Contacto #000B79 · halos #3C66FE · enlaces #7CB5FB.</p></div></section>
+<section class="section" id="tipografia"><div class="container"><p class="eyebrow">02 · Jerarquía</p><h2>Tipografía</h2><div class="columns"><article class="panel"><p class="eyebrow">Arial Black · display</p><div class="type-display">DISEÑO CON<br>PERSONALIDAD</div><p>Secciones: clamp(30px, 4.5vw, 56px). Títulos del sistema: 36–48 px; proyectos: 56–72 px.</p></article><article class="panel"><p class="eyebrow">Serif · portada</p><div class="type-serif">PORTAFOLIO</div><p>Serifas de gran escala, Times New Roman como referencia y fallbacks Didot/Bodoni MT del index. Halo blanco azulado.</p></article><article class="panel"><p class="eyebrow">Arial · lectura</p><p style="font-size:18px;line-height:28px">Diseño gráfico y digital. Descripciones claras que acompañan las imágenes sin competir con ellas.</p><p>Cuerpo: 16–18 px / 24–28 px. Auxiliares: 13–14 px. Navegación: 14–16 px.</p></article><article class="panel"><p class="eyebrow">Impact · numeración activa</p><div class="type-number">01</div><p>Habilidades: números azules, texto inferior y separadores verticales.</p></article></div></div></section>
+<section class="section" id="formas"><div class="container"><p class="eyebrow">03 · Geometría y espacio</p><h2>Formas</h2><div class="shape-grid"><div class="shape">Base rectangular · 0 px</div><div class="shape" style="border-radius:18px">Componente · 10–30 px</div><div class="shape" style="background:none;border:0"><span class="star" aria-label="Estrella de cinco puntas"></span></div></div><div class="divider" aria-hidden="true">★</div><p class="intro">Líneas de 1–2 px; retícula de 12 / 8 / 1 columnas; contenedor activo 1440 px. Espaciado: 8 · 16 · 24–32 · 48–64 · 96–140 px. En móvil, menos estrellas y títulos proporcionales.</p></div></section>
+<section class="section" id="componentes"><div class="container"><p class="eyebrow">04 · Interacción y contenido</p><h2>Componentes</h2><div class="columns"><article class="panel"><h3>Botones y filtros</h3><p>Base oscura, borde claro y contorno azul iluminado al pasar el cursor, enfocar o activar.</p><div class="demo-row"><button type="button" id="action-demo">Explorar mi trabajo</button></div><div class="demo-row" role="group" aria-label="Ejemplo de filtros"><button type="button" data-filter="Todos" aria-pressed="true">Todos</button><button type="button" data-filter="Marca" aria-pressed="false">Marca</button><button type="button" data-filter="Editorial" aria-pressed="false">Editorial</button></div><p id="filter-status" role="status">Mostrando todos los ejemplos.</p></article><article class="panel glow-card" tabindex="0"><p class="eyebrow">Experiencia · hover / foco</p><h3>Tarjeta con profundidad</h3><p>Elevación de 6 px y halo azul. Las tarjetas principales de Mis proyectos permanecen estables: solo se ilumina Ver proyecto.</p></article></div><h3>Galería y visor</h3><div class="grid-demo"><figure class="piece"><div class="art"><span class="star"></span></div><figcaption>Miniatura cuadrada · object-fit: cover</figcaption></figure><figure class="piece"><div class="art"><span style="font:80px Impact;color:#174bff">02</span></div><figcaption>Cuadrícula · 3 / 2 / 1 columnas</figcaption></figure><figure class="piece"><div class="art"><span style="font:50px 'Times New Roman';color:white">MSR</span></div><figcaption>Visor completo · object-fit: contain</figcaption></figure></div><p class="intro">El visor del portafolio abre con transición de tarjeta y cierra con clic fuera, × o Escape. El foco vuelve al origen. La portada y Contacto usan luz LED; Sobre mí combina retrato, estrellas giratorias y una banda de cualidades. La reducción de movimiento desactiva decoración animada.</p></div></section>
+<section class="section" id="reglas"><div class="container"><p class="eyebrow">05 · Criterios</p><h2>Sí / No</h2><div class="rules"><article class="panel"><h3>Sí</h3><ul><li>Prioridad a las imágenes y los proyectos.</li><li>Azules, alto contraste y espacio negativo.</li><li>Estrellas de cinco puntas con moderación.</li><li>Microinteracciones, foco visible y toque.</li><li>Respetar reducción de movimiento.</li></ul></article><article class="panel"><h3>No</h3><ul><li>Identidad que compita con los proyectos.</li><li>Colores adicionales sin función.</li><li>Saturación de estrellas o sombras.</li><li>Texto ilegible sobre imágenes o texturas.</li><li>Animaciones que impidan navegar.</li></ul></article></div><h3>Decisiones de compatibilidad</h3><p class="intro">Prevalece el index actual sobre las reglas históricas de fondos blancos, radios máximos de 8 px y ausencia de sombras. La navegación Colores / Tipografía / Formas / Componentes / Sí-No pertenece a esta guía; no reemplaza el header del portafolio.</p><details><summary>Tokens completos del Markdown</summary><pre>---
+metadata:
+  name: &quot;MSR — Sistema de diseño&quot;
+  source: &quot;DESIGN_Mireille.docx&quot;
+  updated: &quot;2026-10-19&quot;
+  precedence: &quot;Diseño efectivo de index.html sobre reglas históricas contradictorias&quot;
+colors:
+  brand:
+    intense: &quot;#000B79&quot;
+    electric: &quot;#3C66FE&quot;
+    sky: &quot;#7CB5FB&quot;
+    night: &quot;#16113C&quot;
+    white: &quot;#FEFEFE&quot;
+    black: &quot;#000000&quot;
+  active:
+    intense: &quot;#07134D&quot;
+    electric: &quot;#174BFF&quot;
+    sky: &quot;#7299FF&quot;
+    night: &quot;#050610&quot;
+    text: &quot;#EEEEEF&quot;
+    background: &quot;#050505&quot;
+    surface: &quot;#090B16&quot;
+    surface-project: &quot;#090C1A&quot;
+  complementary:
+    contact: &quot;#000B79&quot;
+    halo: &quot;#3C66FE&quot;
+    link: &quot;#7CB5FB&quot;
+typography:
+  family-display: &quot;Arial Black, Arial, sans-serif&quot;
+  family-body: &quot;Arial, Helvetica, sans-serif&quot;
+  family-cover: &quot;Didot, Bodoni MT, Times New Roman, serif&quot;
+  family-numbers: &quot;Impact, Arial Narrow, Arial, sans-serif&quot;
+  display-range: &quot;80–120px&quot;
+  h1-range: &quot;56–72px&quot;
+  h2-range: &quot;36–48px&quot;
+  h3-range: &quot;22–28px&quot;
+  body-range: &quot;16–18px&quot;
+  body-leading: &quot;24–28px&quot;
+  small-range: &quot;13–14px&quot;
+  button-range: &quot;14–16px&quot;
+  section-title-active: &quot;clamp(30px, 4.5vw, 56px)&quot;
+  cover-active: &quot;16cqw&quot;
+spacing:
+  micro: &quot;8px&quot;
+  small: &quot;16px&quot;
+  related: &quot;24px&quot;
+  related-lg: &quot;32px&quot;
+  block: &quot;48px&quot;
+  block-lg: &quot;64px&quot;
+  section: &quot;96px&quot;
+  section-lg: &quot;140px&quot;
+layout:
+  columns-desktop: 12
+  columns-tablet: 8
+  columns-mobile: 1
+  container-active: &quot;1440px&quot;
+  container-guideline: &quot;1400–1600px&quot;
+  margin-mobile: &quot;16–20px&quot;
+  gallery-columns: &quot;3 / 2 / 1&quot;
+breakpoints:
+  mobile: &quot;320–599px&quot;
+  tablet: &quot;600–1023px&quot;
+  desktop: &quot;1024–1439px&quot;
+  wide: &quot;1440px+&quot;
+rounded:
+  graphic-base: &quot;0px&quot;
+  small: &quot;4px&quot;
+  historical-medium: &quot;8px&quot;
+  gallery: &quot;10–12px&quot;
+  controls: &quot;12–30px&quot;
+  pill: &quot;999px&quot;
+  about-top: &quot;64px desktop / 36px mobile&quot;
+effects:
+  border-rest: &quot;1px solid rgba(255,255,255,0.21)&quot;
+  border-active: &quot;#7299FF&quot;
+  glow: &quot;0 0 10px #3C66FEAA, 0 0 24px #174BFF77&quot;
+  led: &quot;0 0 2px #FFF, 0 0 8px #FFFFFFCC, 0 0 20px #A6C3FFA6, 0 0 36px #3C66FE66&quot;
+  card-lift: &quot;translateY(-6px)&quot;
+motion:
+  led-duration: &quot;4.8s&quot;
+  star-primary: &quot;16s linear infinite&quot;
+  star-secondary: &quot;22s linear infinite reverse&quot;
+  qualities: &quot;24s linear infinite&quot;
+  image-viewer: &quot;0.32s&quot;
+  reduced-motion: &quot;Desactivar animaciones decorativas y mantener el contenido visible&quot;
+components:
+  navigation: &quot;Cristal oscuro; logo MSR; contorno luminoso; menú móvil&quot;
+  buttons: &quot;Base oscura, borde claro y halo azul en hover/focus/active&quot;
+  filter: &quot;Todos / Marca / Publicidad / Editorial / Modelado 3D; aria-pressed&quot;
+  project-card: &quot;Imagen superior, texto visible y brillo solo en Ver proyecto&quot;
+  project-gallery: &quot;Cuadrícula adaptable; miniaturas cuadradas; object-fit: cover&quot;
+  image-viewer: &quot;dialog; object-fit: contain; cierre exterior, × o Escape&quot;
+assets:
+  header: &quot;assets/img/fondo encabezado.png&quot;
+  logo: &quot;assets/img/LOGO MSR@300x.png&quot;
+  portrait: &quot;assets/img/Mireille_1@300x.png&quot;
+  star: &quot;assets/img/estrella azuul@300x.png&quot;
+---</pre></details><details><summary>Documento fuente: contenido actualizado</summary><div class="doc-copy"><p>Mi Sistema de Diseño</p><p>Este documento es un ejemplo de cómo se describe un sistema de diseño completo en lenguaje natural, en Word. Es el punto de partida del proyecto: a partir de una descripción como esta, OpenCode genera el archivo DESIGN.md con sus tokens (los valores organizados en formato YAML) y su estructura. Aquí está descrito el sistema real de la marca jonmircha; tú describe el de tu propia marca con este mismo nivel de detalle.</p><h3>1 · Personalidad</h3><p>Mi portafolio representa una identidad creativa, enérgica, contemporánea y segura, enfocada principalmente en el diseño gráfico, la identidad de marca y la comunicación visual.</p><p>Busco que el sitio tenga una personalidad fuerte desde el primer contacto, pero sin competir con los proyectos. La estética combina una composición editorial con elementos gráficos más expresivos, utilizando tipografía de gran escala, contrastes marcados, estrellas y texturas como recursos constantes de identidad.</p><p>El diseño debe sentirse juvenil y experimental, pero al mismo tiempo profesional. Mi objetivo es que cada proyecto sea el protagonista y que mi identidad funcione como el hilo conductor entre las diferentes áreas de mi trabajo.</p><p>La identidad MSR combina diseño editorial de gran escala, estética nocturna, azules eléctricos, recursos estelares y efectos de iluminación neón. La interfaz prioriza los proyectos mediante fondos oscuros y galerías visuales, con microinteracciones discretas. La apariencia final del index tiene prioridad sobre las descripciones iniciales de fondos blancos y diseño completamente plano.</p><h3>2 · Colores</h3><p>Mi identidad utiliza una paleta basada en azules de diferentes intensidades, acompañados de blanco y negro. El azul es el elemento cromático principal de mi portafolio y permite crear una estética enérgica, contemporánea y de alto contraste.</p><p>Azul claro — #7CB5FB: color de acento suave. Lo utilizo en detalles gráficos, estrellas secundarias, líneas, elementos decorativos y estados sutiles.</p><p>Azul eléctrico — #3C66FE: color de acento principal. Lo utilizo en botones, elementos interactivos, estados hover, indicadores y elementos que necesitan destacar.</p><p>Azul intenso — #000B79: color principal de identidad. Se utiliza especialmente en fondos, bloques gráficos, encabezados y elementos de marca.</p><p>Azul noche — #16113C: es el tono más oscuro de la paleta. Lo utilizo para fondos profundos, transiciones entre secciones y zonas donde quiero generar mayor contraste.</p><p>Blanco — #FEFEFE: funciona como fondo claro y como color principal de texto sobre superficies azules. Ayuda a mantener el sitio limpio y equilibrar la intensidad de la paleta.</p><p>Negro — #000000: se utiliza principalmente para textos sobre fondos claros y elementos que requieren el máximo contraste.</p><p>La combinación principal del sitio debe ser #000B79 + #FEFEFE, ya que representa mejor la identidad visual actual de mi portafolio.</p><p>El #3C66FE funciona como el color interactivo principal y debe permitir identificar rápidamente botones, enlaces y acciones.</p><p>El #7CB5FB se reserva para detalles gráficos y elementos secundarios, mientras que #16113C permite crear secciones más profundas y generar variación sin salir de la gama azul.</p><p>#000000 y #FEFEFE funcionan como neutros, principalmente para garantizar legibilidad y permitir que los proyectos mantengan sus colores originales.</p><p>Existen además colores aplicados directamente a componentes, especialmente #000B79 en Contacto, #3C66FE en halos y separadores, y #7CB5FB en enlaces. Deben registrarse como acentos complementarios activos, no asumir que toda la interfaz usa exclusivamente los tokens sobrescritos.</p><h3>3 · Tipografía</h3><p>Mi sistema tipográfico utiliza únicamente Arial Black, Arial y para el encabezado de PORTAFOLIO se utiliza times new roman en serif y tamaño responsivo  buscando mantener una identidad visual directa, contundente y fácil de leer. Arial Black funciona como la tipografía principal para títulos, encabezados y elementos de alto impacto, mientras que Arial se utiliza para textos informativos, descripciones, navegación y contenido general. Esta combinación permite conservar el carácter fuerte y gráfico que ya está presente en mi portafolio, especialmente en los grandes títulos de las categorías. portafolio 2026</p><p>El display, utilizado para los títulos de mayor impacto y palabras protagonistas de cada sección, se presenta en Arial Black, siempre en mayúsculas, con un tamaño aproximado de 80 a 120 px y un interlineado compacto de entre 85 y 110 px.</p><p>Los títulos principales o H1 utilizan Arial Black entre 56 y 72 px, generalmente en mayúsculas, para identificar proyectos y secciones importantes. Los títulos secundarios o H2 utilizan Arial Black entre 36 y 48 px, mientras que los subtítulos o H3 se mantienen entre 22 y 28 px, permitiendo establecer diferentes niveles de información sin perder consistencia.</p><p>Para el cuerpo de texto utilizo Arial Regular entre 16 y 18 px, con un interlineado aproximado de 24 a 28 px, priorizando la legibilidad en descripciones de proyectos, procesos y textos sobre mí. Los textos pequeños, como categorías, fechas, etiquetas o información complementaria, utilizan Arial Regular entre 13 y 14 px. La navegación y los botones pueden utilizar Arial Bold o Arial Black entre 14 y 16 px, dependiendo del nivel de énfasis necesario.</p><h3>4 · Layout y espaciado</h3><p>El sitio utiliza una composición editorial, modular y visual, con mucho protagonismo de las imágenes.</p><p>En escritorio trabajo sobre una rejilla de 12 columnas, permitiendo combinar proyectos de diferentes tamaños. Algunos proyectos pueden ocupar toda la pantalla mientras otros pueden organizarse en composiciones de dos o tres columnas.</p><p>El ancho máximo del contenido debe estar entre 1400 y 1600px. Las secciones principales deben tener suficiente espacio para diferenciarse entre sí. Utilizo aproximadamente: 8px: microespaciado, 16px: separación pequeña, 24–32px: separación entre elementos relacionados, 48–64px: separación entre bloques, 96–140px: separación entre secciones principales.</p><p>No quiero que todos los proyectos aparezcan dentro de tarjetas idénticas. El layout debe poder variar para generar un recorrido más editorial y menos parecido a una plantilla convencional de portafolio.</p><h3>5 · Profundidad</h3><p>Predominan superficies #050505, #050610, #090B16 y #090C1A, con bloques azul profundo y portada con gradiente radial oscuro. La sección Contacto recupera el fondo azul intenso con imagen de textura. Sobre mí presenta bordes superiores curvos, y algunos componentes usan esquinas redondeadas de 10 a 30 px.</p><p>El sistema real emplea sombras, resplandores y bordes luminosos para señalar interacción. No debe mantenerse como regla absoluta la prohibición de radios mayores a 8 px ni de sombras, ya que contradice el index.</p><h3>6 · Formas</h3><p>Mi sistema visual utiliza principalmente formas geométricas, rectangulares y de bordes definidos, manteniendo una estética gráfica y editorial. Las esquinas por defecto tienen un radio de 0 px, especialmente en imágenes, bloques de contenido, galerías y secciones principales. En elementos interactivos pequeños puedo utilizar un redondeo sutil de 4 px, mientras que los botones y etiquetas pueden tener un radio máximo de 8 px. Evito radios mayores porque las formas excesivamente redondeadas no corresponden con la personalidad visual de mi portafolio.</p><p>La estrella de cinco puntas funciona como uno de los recursos gráficos característicos de mi identidad, como ya aparece en la portada y otros elementos de tu portafolio. portafolio 2026 En escritorio, una estrella decorativa principal puede medir aproximadamente 48 × 48 px, mientras que las estrellas secundarias pueden variar entre 24 × 24 px y 32 × 32 px. Para detalles pequeños o indicadores utilizo estrellas de 16 × 16 px. En composiciones especiales o fondos, una estrella puede aumentar hasta 80–120 px, siempre que no interfiera con la lectura ni compita con los proyectos.</p><p>Las líneas decorativas que acompañan títulos o estrellas deben tener un grosor de 1–2 px y pueden extenderse entre 80 y 200 px, dependiendo de la composición.</p><p>Portada y navegación</p><p>La portada es una composición editorial a altura completa con halo elíptico azul neón, título PORTAFOLIO en serif, metadata Diseño Gráfico y Digital / Edición 2026, estrella separadora y dos accesos a Proyectos y Sobre mí. El título presenta encendido y apagado de luz mediante keyframes; se desactiva la animación con reducción de movimiento.</p><p>La navegación se superpone en la parte superior de la portada como barra translúcida con desenfoque backdrop-filter y logo MSR a la izquierda. Los enlaces usan contorno y brillo azul al pasar el cursor, recibir foco o activarse. En móvil aparece el botón Menú.</p><h3>7 · Componentes</h3><p>Elementos gráficos y movimiento</p><p>Estrellas de cinco puntas azules en el retrato, separadores y galerías; dos estrellas giran en Sobre mí. Una flecha curva señala el retrato. La banda de cualidades se desplaza continuamente de forma horizontal. La portada y Contacto emplean pulsación o encendido LED.</p><p>Los elementos con clase reveal aparecen al entrar al área visible mediante IntersectionObserver. Se respetan preferencias de movimiento reducido: las animaciones decorativas se detienen y el contenido permanece visible.</p><p>Navegación</p><p>La navegación debe ser sencilla y permanecer visualmente limpia, incluye:Inicio, Sobre mí, Proyectos, Contacto</p><p>Necesito que en el header elimines los textos de marca publicidad editorial y 3d y solo dejes colores, tipografia, formas y componentes como botones con bordes redondeados y que al momento de presionarlos cambien de tono de azul</p><p>necesito que en el header generes otro boton que diga si/no</p><p>También debe permitir explorar directamente las categorías: Marca, Publicidad, Editorial, Modelado 3D. En escritorio puede permanecer visible en la parte superior. En móvil se transforma en un menú compacto.</p><p>En el encabezado pongas el jpg de @assets/img/fondo encabezado.png</p><p>Botones</p><p>Los botones y enlaces de acción tienen base oscura, borde claro y efecto luminoso azul en hover, foco y activación. Los filtros de categoría son botones redondeados que mantienen aria-pressed según la selección. El botón Ver proyecto conserva un contorno luminoso al interactuar, mientras la tarjeta permanece estable.</p><p>El botón de menú móvil cambia aria-expanded. Los enlaces de navegación registran aria-current al seleccionarse. Se utiliza foco visible para navegación por teclado.</p><p>Tarjetas de proyecto</p><p>Las tarjetas de proyecto poseen fondo oscuro, borde tenue, imagen superior y texto descriptivo siempre visible debajo. A diferencia de la propuesta original, no aparece una capa oscura sobre la imagen en hover en el diseño efectivo: el foco visual se traslada al botón Ver proyecto.</p><p>El detalle presenta fondo negro, título blanco y una galería de tarjetas con textura oscura, borde azulado, reflejo al hover y estrella decorativa. Las imágenes se muestran cuadradas (aspect-ratio 1/1, object-fit: cover), por lo que puede haber recorte en miniatura; el visor modal muestra la imagen completa con object-fit: contain.</p><p>Separadores de categoría</p><p>Sobre mí combina fotografía a sangre con texto, estrellas y banda móvil. Habilidades muestra cuatro columnas editoriales numeradas con separadores verticales. Educación utiliza un bloque con línea lateral y estrella. Experiencia se distribuye en tres tarjetas con resplandor al interactuar. Contacto usa título luminoso y tres columnas centradas.</p><h3>8 · Reglas (sí y no)</h3><p>Sí</p><p>Mantener el azul como elemento principal de identidad.</p><p>Utilizar títulos grandes, condensados y en mayúsculas.</p><p>Dar prioridad a las imágenes de los proyectos.</p><p>Utilizar estrellas como recurso gráfico recurrente.</p><p>Mantener alto contraste entre azul y blanco.</p><p>Crear composiciones editoriales y dinámicas.</p><p>Utilizar mucho espacio negativo.</p><p>Incorporar animaciones sencillas que hagan sentir vivo el sitio.</p><p>Mantener consistencia entre todas las categorías.</p><p>No</p><p>No permitir que la identidad del sitio compita con los proyectos.</p><p>No utilizar demasiados colores adicionales en la interfaz.</p><p>No llenar todas las secciones de estrellas.</p><p>No utilizar degradados sin una función específica.</p><p>No abusar de sombras.</p><p>No utilizar tarjetas excesivamente redondeadas.</p><p>No hacer que todos los proyectos tengan exactamente el mismo tamaño.</p><p>No utilizar animaciones que dificulten la navegación.</p><p>No colocar demasiado texto sobre las imágenes.</p><p>No utilizar texturas detrás de textos largos si afectan la legibilidad.</p><h3>9 · Comportamiento responsivo</h3><p>El sitio debe adaptarse manteniendo la misma identidad visual. Móvil, 320–599px: una columna, márgenes de 16–20px y proyectos a ancho completo, Tableta, 600–1023px: dos columnas cuando el contenido lo permita, Escritorio, 1024–1439px: rejilla de 12 columnas con composiciones variables, Escritorio amplio, 1440px+: contenido centrado con ancho máximo de aproximadamente 1600px.</p><p>Los títulos grandes deben reducir su tamaño progresivamente. En móvil, las interacciones que dependen de hover deben transformarse en información visible o activarse mediante toque.</p><p>¿Y los tokens y la guía del agente?</p><p>No los escribo yo. A partir de esta descripción, OpenCode genera el archivo DESIGN.md con los tokens (todos estos valores organizados en formato YAML) y una guía de construcción para el agente. Mi trabajo como diseñador es describir las decisiones; el agente arma la estructura técnica.</p></div></details><p><a class="action" href="DESIGN.md">Abrir DESIGN.md</a></p></div></section></main><div class="container footer">MSR · Previsualización de documentación · index.html sin cambios</div><script>
+document.querySelectorAll('[data-filter]').forEach(function(button){button.addEventListener('click',function(){document.querySelectorAll('[data-filter]').forEach(function(item){item.setAttribute('aria-pressed',String(item===button));});document.getElementById('filter-status').textContent=button.dataset.filter==='Todos'?'Mostrando todos los ejemplos.':'Filtro de ejemplo: '+button.dataset.filter;});});document.getElementById('action-demo').addEventListener('click',function(){document.getElementById('filter-status').textContent='Así se ve la activación de un botón con contorno luminoso.';});
+</script></body></html>
