@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="CV digital de Mireille Abigail Sánchez Rosales — Diseñadora Gráfica y Digital.">
+<title>Mireille Abigail Sánchez Rosales — CV · Portafolio 2026</title>
+<style>
+/* ===== Tokens derivados de DESIGN.md ===== */
+:root{
+  --intense:#000B79; --electric:#3C66FE; --sky:#7CB5FB;
+  --night:#16113C; --white:#FEFEFE; --black:#000000;
+  --bg-brand:var(--intense); --bg-deep:var(--night); --bg-light:var(--white);
+  --text-dark:var(--white); --text-light:var(--black);
+  --display:"Arial Black",Arial,sans-serif; --body:Arial,Helvetica,sans-serif;
+  --r-none:0px; --r-sm:4px; --r-md:8px; --r-pill:999px;
+  --sp-micro:8px; --sp-small:16px; --sp-related:24px; --sp-related-lg:32px;
+  --sp-block:48px; --sp-block-lg:64px; --sp-section:96px;
+  --sh-hover:0 8px 24px rgba(22,17,60,.16); --sh-deep:0 16px 48px rgba(22,17,60,.22);
+  --focus:3px solid var(--electric);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{font-family:var(--body);background:var(--bg-light);color:var(--text-light);font-size:17px;line-height:26px}
+img{max-width:100%;display:block}
+a{color:var(--electric)}
+:focus-visible{outline:var(--focus);outline-offset:2px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--white);color:var(--intense);padding:10px 18px;font-weight:700;z-index:200}
+.skip:focus{left:8px;top:8px}
+.wrap{max-width:1440px;margin:0 auto;padding:0 24px}
+section{padding:64px 0}
+.eyebrow{font-family:var(--display);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--electric);margin-bottom:10px}
+/* ===== Navegación sobre papel cortado ===== */
+.nav{position:absolute;top:0;left:0;width:100%;z-index:100;color:var(--night);background:url("assets/img/papel%20cortado@300x.png") center top/100% 100% no-repeat;padding:24px 0 58px;min-height:150px}
+.nav .wrap{display:flex;justify-content:center;align-items:center;padding:0 24px}
+.nav nav{width:100%}
+.nav-links{display:flex;justify-content:center;align-items:center;gap:clamp(4px,1vw,18px);list-style:none;flex-wrap:wrap}
+.nav-links a{display:block;color:var(--night);font-family:var(--body);font-weight:800;font-size:clamp(12px,1.25vw,18px);line-height:1.2;text-transform:uppercase;text-decoration:none;padding:12px 14px;border:2px solid transparent;border-radius:var(--r-pill);transition:background .2s,color .2s,transform .2s}
+.nav-links a:hover,.nav-links a:focus-visible{background:var(--intense);color:var(--white);transform:translateY(-2px)}
+.nav-links a:active{background:var(--electric);color:var(--white);transform:translateY(0)}
+.burger{display:none;background:var(--intense);border:2px solid var(--intense);border-radius:var(--r-pill);color:#fff;font-family:var(--body);font-weight:800;font-size:14px;text-transform:uppercase;padding:10px 22px;cursor:pointer}
+section[id]{scroll-margin-top:24px}
+@media(max-width:700px){
+  .nav{min-height:120px;padding:16px 0 42px}
+  .nav .wrap{flex-direction:column}
+  .burger{display:block}
+  .nav-links{display:none;padding:14px 0 10px;gap:4px}
+  .nav.open .nav-links{display:flex}
+  .nav.open{background-size:100% 100%}
+  .nav-links a{font-size:12px;padding:10px 12px}
+  .nav.open + main .hero{padding-top:260px}
+}
+/* ===== Hero ===== */
+.hero{background:var(--intense) url("assets/img/fondo%20encabezado.png") center/cover no-repeat;color:var(--white);text-align:center;padding:210px 0 90px;position:relative;overflow:hidden}
+.hero-year{position:absolute;top:160px;right:34px;color:var(--sky);font-size:clamp(18px,2.6vw,28px);letter-spacing:.04em}
+.hero-stage{position:relative;margin:0 auto}
+.hero-ghost{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:transparent;-webkit-text-stroke:1.5px rgba(124,181,251,.85);font-family:var(--display);text-transform:uppercase;font-size:clamp(80px,17.5vw,250px);white-space:nowrap;line-height:1;pointer-events:none;user-select:none;transform:translateY(-4%)}
+.hero-title{font-family:var(--display);text-transform:uppercase;line-height:.9;margin:0;position:relative;z-index:1}
+.hero-solid{display:block;color:#fff;font-size:clamp(54px,11.5vw,158px);letter-spacing:0}
+.hero-name{font-family:var(--display);text-transform:uppercase;line-height:1.02;margin:30px 0 0}
+.hero-name .n1{display:block;color:var(--sky);font-size:clamp(30px,5.6vw,68px)}
+.hero-name .n2{display:block;color:var(--electric);font-size:clamp(30px,5.6vw,68px)}
+.hero-div{display:flex;align-items:center;justify-content:center;gap:14px;margin:20px auto 0;max-width:620px}
+.hero-div::before,.hero-div::after{content:"";height:2px;flex:1;background:rgba(254,254,254,.85)}
+.hero-div span{color:#fff;font-size:26px;line-height:1}
+.hero-role{color:#d8dbff;font-size:clamp(14px,2.2vw,18px);margin-top:18px}
+.hero-stars{display:none}
+.btn{font-family:var(--display);font-size:15px;text-transform:uppercase;padding:13px 30px;border-radius:var(--r-md);border:2px solid var(--electric);display:inline-block;text-decoration:none;cursor:pointer;transition:all .2s;background:var(--electric);color:#fff}
+.btn:hover{background:#fff;color:var(--electric);transform:translateY(-2px);box-shadow:var(--sh-hover)}
+.scroll-hint{display:block;margin-top:26px;color:var(--sky);font-size:13px;letter-spacing:.12em;text-transform:uppercase;text-decoration:none}
+/* ===== Sobre mí ===== */
+#sobre-mi{background:var(--white);overflow:hidden;padding:64px 0 0}
+#sobre-mi .wrap{padding:0;max-width:none}
+.about-grid{display:grid;gap:36px}
+.about-grid>div:first-child{padding:0 24px}
+@media(min-width:900px){.about-grid>div:first-child{padding-left:max(24px,calc((100vw - 1440px)/2 + 24px))}}
+.about-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(48px,7vw,88px);color:var(--intense);line-height:.95}
+.about-bio{margin-top:18px;max-width:620px;font-size:16px;line-height:25px}
+.about-cols{display:grid;gap:26px;margin-top:30px}
+.about-h{font-family:var(--display);text-transform:uppercase;font-size:clamp(24px,3vw,34px);color:var(--intense);margin-bottom:8px}
+.about-list{list-style:none;font-size:15px;line-height:23px}
+.tags{display:flex;gap:10px;flex-wrap:wrap;list-style:none}
+.tags li{background:var(--electric);color:#fff;border-radius:var(--r-pill);padding:9px 20px;font-size:14px;font-weight:700}
+.prog{display:flex;gap:10px;flex-wrap:wrap;list-style:none;margin-top:6px}
+.prog li{background:var(--electric);color:#fff;font-weight:900;font-size:18px;border-radius:6px;min-width:48px;height:44px;display:flex;align-items:center;justify-content:center;padding:0 10px}
+.about-photo{position:relative;max-width:none;margin:0 0 -28px auto;width:100%;align-self:end;overflow:visible}
+.about-photo img.photo{border-radius:var(--r-none);position:relative;z-index:1;width:100%;height:auto;display:block;margin:28px 0 0 auto;vertical-align:bottom;transform:none}
+.spin-star{position:absolute;z-index:0;pointer-events:none;animation:spin 16s linear infinite}
+.spin-star.s1{width:250px;top:30px;right:-35px;left:auto}
+.spin-star.s2{width:220px;bottom:60px;left:-90px;animation-duration:22s;animation-direction:reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:900px){.about-grid{grid-template-columns:1.1fr .9fr;align-items:start}.about-cols{grid-template-columns:220px 1fr;align-items:start}}
+@media(max-width:640px){.spin-star.s1{width:120px;right:-20px}.spin-star.s2{width:150px;left:-30px}}
+/* ===== Educación ===== */
+#educacion{background:var(--bg-deep);color:#fff}
+#educacion .sec-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(38px,6vw,64px);color:#fff}
+.edu-block{border-left:2px solid var(--electric);padding:8px 0 8px 28px;margin-top:24px;position:relative;max-width:760px}
+.edu-block .star{position:absolute;left:-17px;top:6px;color:var(--sky);font-size:32px;background:var(--night);line-height:1}
+.edu-block h3{font-family:var(--display);font-size:22px;text-transform:uppercase}
+.edu-block p{color:#d8dbff;margin-top:10px;max-width:640px}
+/* ===== Experiencia ===== */
+#experiencia{background:#fff}
+#experiencia .sec-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(38px,6vw,64px);color:var(--intense)}
+.timeline{list-style:none;margin-top:28px;border-left:2px solid var(--electric);display:grid;gap:48px}
+.timeline li{padding:24px;position:relative;background:#fff;border:1px solid #e4e4e4;border-radius:var(--r-sm);margin-left:28px;transition:transform .25s,box-shadow .25s}
+.timeline li:hover{transform:translateY(-3px);box-shadow:var(--sh-hover)}
+.timeline .dot{position:absolute;left:-45px;top:22px;color:var(--electric);font-size:24px;background:#fff;line-height:1}
+.timeline h3{font-family:var(--display);font-size:20px;text-transform:uppercase;color:var(--intense)}
+.timeline .period{color:var(--electric);font-weight:700;font-size:14px;text-transform:uppercase;display:block;margin:4px 0 10px}
+.timeline p{font-size:16px;max-width:680px}
+/* ===== Habilidades ===== */
+#habilidades{background:var(--intense) url("assets/img/fondo%20encabezado.png") center/cover no-repeat;color:#fff}
+#habilidades .sec-title{font-family:var(--display);text-transform:uppercase;font-size:clamp(38px,6vw,64px)}
+.skills{display:grid;gap:28px;margin-top:28px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.skill .num{font-family:var(--display);font-size:72px;line-height:1}
+.skill .cat{font-size:20px;margin-top:6px}
+.skill .bar{height:2px;width:120px;background:var(--sky);margin-top:10px}
+.tools{margin-top:36px}
+.tools h3{font-family:var(--display);font-size:18px;text-transform:uppercase;letter-spacing:.06em}
+.tools ul{list-style:none;display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.tools li{border:2px solid var(--sky);border-radius:var(--r-md);padding:10px 18px;font-weight:700;font-size:14px;transition:all .2s}
+.tools li:hover{background:var(--sky);color:var(--night)}
+/* ===== Proyectos ===== */
+#proyectos{background:#fff}
+.proj-head{font-family:var(--display);text-transform:uppercase;font-size:clamp(40px,7vw,72px);color:var(--intense);line-height:.95}
+.proj-ghost{display:block;color:transparent;-webkit-text-stroke:2px var(--sky);font-size:clamp(44px,8vw,84px)}
+.folders{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin:26px 0 8px;list-style:none}
+.folder{background:none;border:none;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:12px;padding:6px;transition:transform .2s}
+.folder .f-icon{width:min(150px,100%);aspect-ratio:1.35;position:relative;transition:transform .2s}
+.folder .f-back{position:absolute;inset:6% 0 0 0;background:var(--intense);border-radius:8px 12px 8px 8px}
+.folder .f-back::before{content:"";position:absolute;top:-9%;left:0;width:38%;height:22%;background:var(--intense);border-radius:8px 10px 0 0}
+.folder .f-paper{position:absolute;left:6%;right:6%;top:12%;height:26%;background:#fff;border-radius:4px}
+.folder .f-front{position:absolute;inset:26% 0 0 0;background:var(--electric);border-radius:8px;box-shadow:var(--sh-hover);transition:background .2s,transform .2s;transform:skewX(0)}
+.folder:hover .f-front{background:var(--sky)}
+.folder:hover{transform:translateY(-4px)}
+.folder[aria-pressed="true"] .f-front{background:var(--sky)}
+.folder[aria-pressed="true"] .f-icon{transform:scale(1.04)}
+.folder .f-label{font-family:var(--display);text-transform:uppercase;font-size:clamp(12px,1.8vw,17px);color:var(--text-light)}
+.folder[aria-pressed="true"] .f-label{color:var(--intense)}
+@media(max-width:700px){.folders{grid-template-columns:repeat(2,1fr)}}
+.proj-grid{display:grid;gap:24px;grid-template-columns:1fr}
+.proj{position:relative;border:1px solid #ddd;border-radius:var(--r-none);overflow:hidden;background:#fff}
+.proj img{width:100%;height:250px;object-fit:cover;transition:transform .3s}
+.proj:hover img{transform:scale(1.04)}
+.proj .ov{position:absolute;inset:0;background:rgba(22,17,60,.88);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:24px;opacity:0;transition:opacity .25s}
+.proj:hover .ov,.proj:focus-within .ov{opacity:1}
+.proj .ov b{font-family:var(--display);text-transform:uppercase}
+.proj .ov small{color:var(--sky);margin:6px 0 12px}
+.proj .meta{padding:12px 4px 0;font-size:13px;color:#555}
+@media(min-width:700px){.proj-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1100px){.proj-grid{grid-template-columns:1fr 1fr 1fr}.proj img{height:280px}}
+/* ===== Contacto / footer ===== */
+#contacto{background:var(--intense) url("assets/img/fondo%20encabezado.png") center/cover no-repeat;color:#fff;text-align:center}
+#contacto .big{font-family:var(--display);text-transform:uppercase;font-size:clamp(48px,10vw,100px);line-height:.95}
+#contacto .big-ghost{display:block;color:transparent;-webkit-text-stroke:2px var(--sky)}
+.contact-star{font-size:40px;color:var(--sky);margin:18px 0 6px}
+.contact-lines{display:flex;justify-content:center;gap:16px;margin-bottom:26px}
+.contact-lines span{height:2px;width:160px;background:var(--sky)}
+.contact-grid{display:grid;gap:22px;grid-template-columns:1fr;max-width:900px;margin:0 auto}
+.contact-grid h3{font-family:var(--display);font-size:20px;text-transform:uppercase}
+.contact-grid a{color:#fff;font-size:18px;text-decoration:none}
+.contact-grid a:hover{color:var(--sky);text-decoration:underline}
+@media(min-width:800px){.contact-grid{grid-template-columns:1fr 1fr 1fr}}
+footer{background:var(--night);color:#fff;min-height:100px;display:flex;align-items:center}
+footer .wrap{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;width:100%;padding-top:20px;padding-bottom:20px;font-size:14px}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .35s,transform .35s}
+.reveal.in{opacity:1;transform:none}
+dialog{border:1px solid #ccc;border-radius:8px;padding:28px;max-width:680px;width:calc(100% - 40px);max-height:88vh;overflow:auto}
+#m-imgs{display:grid;gap:14px;margin-bottom:14px}
+#m-imgs img{border-radius:4px;width:100%}
+dialog::backdrop{background:rgba(22,17,60,.6)}
+
+/* Composición editorial: presentación, capacidades y selección de trabajo */
+#sobre-mi{background:#f7f5ef;border-radius:48px 48px 0 0;margin-top:-30px;position:relative;padding:48px 0}
+#sobre-mi .wrap{max-width:1240px;padding:0 32px}
+.about-grid{grid-template-columns:260px 1fr;gap:48px;align-items:center}
+.about-grid>div:first-child{padding:0}
+.about-photo{grid-column:1;grid-row:1;width:100%;margin:0;transform:rotate(-5deg);background:#fff;padding:12px 12px 28px;box-shadow:0 10px 30px #16113c18}
+.about-photo img.photo{margin:0;height:310px;object-fit:cover;object-position:top}
+.about-title{font-size:clamp(36px,4.5vw,60px)}
+.about-bio{max-width:800px}
+.about-cols{grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.about-h{font-size:20px}.tags li{font-size:12px;padding:6px 12px}
+.spin-star.s1{width:90px;right:-35px;top:-30px;z-index:2}.spin-star.s2{display:none}
+#habilidades{background:#dce8ff;color:var(--intense);padding:40px 0}
+#habilidades .eyebrow{color:var(--intense)!important}
+#habilidades .sec-title{font-size:32px}
+.skills{grid-template-columns:repeat(4,1fr);gap:18px;margin-top:22px}
+.skill{background:#fefefe;border-radius:18px;padding:24px;box-shadow:0 4px 0 #000b790c}
+.skill .num{font-size:42px;color:var(--electric)}.skill .cat{font-weight:800;font-size:18px}.skill .bar{width:100%;margin-top:18px}
+.tools{margin-top:24px}.tools li{background:#fff;border:0;padding:8px 16px}
+#proyectos{background:var(--electric);padding:56px 0 70px}
+#proyectos .eyebrow,.proj-head{color:white}.proj-head{font-size:clamp(36px,5vw,64px)}.proj-ghost{display:none}
+.folders{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 18px}.folder{padding:11px 20px;border:1px solid #ffffff80;border-radius:30px;display:block}.folder .f-icon{display:none}.folder .f-label{color:#fff;font-size:14px}.folder[aria-pressed="true"]{background:#fff}.folder[aria-pressed="true"] .f-label{color:var(--intense)}
+#folder-count{color:#fff!important;margin-bottom:24px!important}
+.proj-grid{gap:30px;align-items:start;grid-template-columns:repeat(3,minmax(0,1fr))}
+.proj{border:0;overflow:visible;border-radius:14px 14px 0 0;padding-bottom:26px;background:#fff;box-shadow:0 12px 24px #16113c25;transition:transform .2s}
+.proj:hover{transform:translateY(-6px)}
+.proj::after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:12px;background:radial-gradient(circle at 6px 0,transparent 5px,#fff 5.5px) 0 0/12px 12px repeat-x}
+.proj>img{height:240px;object-fit:cover;border-radius:14px 14px 0 0}
+.proj .ov{position:static;opacity:1;background:transparent;color:var(--night);padding:22px 22px 0;display:flex}
+.proj .ov b{font-size:21px;line-height:1.15}.proj .ov small{color:var(--electric);border-bottom:1px dashed #b7b7c6;padding-bottom:14px;margin:12px 0 18px;width:100%}
+.proj .ov .btn{width:100%;border-radius:30px;padding:10px 16px;font-size:12px}.proj .meta{padding:16px 22px 0;font-size:11px;text-transform:uppercase;letter-spacing:.07em}
+#educacion{background:#f7f5ef;color:var(--night)}#educacion .eyebrow{color:var(--intense)!important}.edu-block p{color:var(--night)}.edu-block .star{background:#f7f5ef}
+#experiencia{background:#f7f5ef;padding-top:20px}.timeline{border:0;grid-template-columns:repeat(3,1fr);gap:20px}.timeline li{margin:0;padding:28px;border:0;border-radius:18px}.timeline .dot{position:static;display:block;margin-bottom:16px}
+#contacto{border-radius:40px 40px 0 0}
+[hidden]{display:none!important}
+body.project-view{background:#18191c}body.project-view>#contenido,body.project-view>footer,body.project-view>.skip{display:none}
+.project-detail{min-height:100vh;background:radial-gradient(ellipse at 80% 15%,#272b44,transparent 55%),#18191c;color:#fff;padding:32px clamp(24px,5vw,80px) 70px}
+.detail-back{display:inline-block;color:#fff;text-decoration:none;border:1px solid #ffffff60;border-radius:30px;padding:10px 20px;margin-bottom:44px}
+.detail-layout{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.detail-copy{position:sticky;top:40px;padding:15px 0 40px}
+.detail-category{display:inline-block;transform:rotate(-4deg);background:#f7f5ef;color:var(--electric);font-weight:900;text-transform:uppercase;padding:9px 28px;margin-bottom:28px}
+.detail-title{font-family:var(--display);font-size:clamp(40px,6vw,92px);line-height:.98;overflow-wrap:anywhere;letter-spacing:-.04em;margin-bottom:28px}
+.detail-description{font-size:18px;line-height:1.6;max-width:540px;color:#dedee5}.detail-count{color:var(--sky);margin-top:26px;font-size:13px;text-transform:uppercase;letter-spacing:.1em}
+.detail-gallery{display:grid;gap:24px}.detail-gallery img{width:100%;height:auto;border-radius:4px;background:#252529}
+@media(max-width:900px){.proj-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.about-grid{grid-template-columns:200px 1fr;gap:28px}.about-cols{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:1fr}.detail-layout{grid-template-columns:1fr}.detail-copy{position:static;padding-bottom:0}.detail-back{margin-bottom:24px}}
+@media(max-width:600px){.about-grid{grid-template-columns:1fr}.about-photo{width:190px;grid-row:1;margin:0 auto 14px}.about-grid>div:first-child{grid-row:2}.proj-grid{grid-template-columns:1fr}.skills{gap:10px}.skill{padding:18px}.folder{padding:9px 14px}.folder .f-label{font-size:12px}#sobre-mi .wrap{padding:0 24px}.proj>img{height:260px}}
+
+
+/* Menú de cristal encima del título */
+.hero{padding-top:32px;overflow:visible}
+body > .nav{position:relative;top:auto;left:auto;width:min(1100px,100%);min-height:0;margin:0 auto 72px;padding:12px 16px;background:rgba(254,254,254,.12);border:1px solid rgba(255,255,255,.4);border-radius:28px;box-shadow:inset 0 1px 0 #ffffff30,0 12px 32px #00032926;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+body > .nav .wrap{padding:0}
+body > .nav-links{gap:6px}
+body > .nav-links a{color:#fff;font-size:clamp(12px,1.1vw,16px);border-radius:18px;padding:13px 16px}
+body > .nav-links a:hover,body > .nav-links a:focus-visible,body > .nav-links a:active,body > .nav-links a[aria-current="location"]{background:var(--electric);color:#fff;border-color:#7cb5fb80;box-shadow:0 4px 16px #000b7930;transform:none}
+@media(max-width:700px){.hero{padding-top:20px}body > .nav{margin:0 auto 48px;padding:10px;border-radius:22px}body > .nav .burger{background:#ffffff18;border-color:#ffffff50}body > .nav.open .nav-links{padding:12px 0 0}body > .nav-links a{font-size:12px;padding:11px 14px}}
+
+
+/* Botón principal de cristal */
+.hero .btn{background:rgba(254,254,254,.12);color:#fff;border:1px solid rgba(255,255,255,.4);box-shadow:inset 0 1px 0 #ffffff30,0 8px 24px #00032926;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.hero .btn:hover,.hero .btn:focus-visible,.hero .btn:active{background:var(--electric);color:#fff;border-color:var(--sky);box-shadow:0 8px 24px #000b7940}
+
+
+/* Presentación con retrato lateral y cualidades en movimiento */
+#sobre-mi{background:#fff;padding:72px 0 0;overflow:hidden;border-radius:48px 48px 0 0}
+#sobre-mi .wrap{max-width:1440px;padding:0 32px}
+.about-grid{position:relative;display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:end}
+.about-copy{padding:10px 0 60px!important;position:relative;z-index:2}
+.about-title{text-transform:none;font-size:clamp(32px,4.6vw,66px);line-height:1.04}
+.about-title span{display:block}.about-hello{color:var(--intense);font-size:.85em}.about-first{color:var(--sky)}.about-last{color:var(--electric)}
+.about-bio{max-width:470px;font-size:15px;line-height:1.45;margin-top:30px}
+.about-cols{display:block;margin-top:32px}.about-h{font-size:clamp(24px,2.5vw,34px)}.about-list{font-size:15px;line-height:1.4;max-width:260px}
+.prog{gap:8px}.prog li{min-width:36px;height:36px;padding:0 6px;border-radius:4px}
+.about-photo{grid-column:2;grid-row:1;align-self:end;position:relative;transform:none;background:transparent;padding:0;margin:0 -32px 0 0;width:calc(100% + 32px);box-shadow:none}
+.about-photo img.photo{position:relative;z-index:1;width:100%;height:auto;max-height:760px;object-fit:contain;object-position:bottom right;margin:0}
+.about-photo .spin-star{display:block;z-index:0;transform-origin:center;animation:spin 16s linear infinite}
+.about-photo .s1{width:clamp(120px,18vw,250px);top:0;right:-30px;left:auto}
+.about-photo .s2{width:clamp(150px,22vw,300px);bottom:40px;left:-70px;animation-direction:reverse;animation-duration:22s}
+.about-arrow{position:absolute;z-index:3;width:clamp(90px,15vw,190px);left:46%;top:130px;color:var(--intense);transform:translateX(-25%)}
+.about-arrow:hover{animation:arrow-bob .7s ease-in-out infinite}
+@keyframes arrow-bob{0%,100%{transform:translateX(-25%) translateY(0)}50%{transform:translateX(-25%) translateY(12px)}}
+.qualities-marquee{position:relative;z-index:4;overflow:hidden;background:var(--intense);color:white;padding:24px 0}
+.qualities-track{display:flex;width:max-content;animation:qualities-scroll 24s linear infinite}
+.qualities-group{display:flex;align-items:center;gap:44px;padding-right:44px;flex-shrink:0}
+.qualities-group span{font-weight:800;font-size:clamp(22px,2.7vw,36px);line-height:1.2;text-transform:uppercase;white-space:nowrap}
+.qualities-group span[aria-hidden]{color:var(--sky)}
+@keyframes qualities-scroll{to{transform:translateX(-50%)}}
+@media(max-width:700px){#sobre-mi{padding-top:40px}#sobre-mi .wrap{padding:0 22px}.about-grid{grid-template-columns:1fr;gap:0}.about-copy{grid-row:1;padding-bottom:30px!important}.about-title{font-size:clamp(32px,7vw,48px)}.about-photo{grid-column:1;grid-row:2;width:75%;margin:0 -22px 0 auto}.about-photo img.photo{height:auto;max-height:500px}.about-arrow{left:10%;top:auto;bottom:220px;width:110px}.about-photo .s2{left:-60px}.qualities-marquee{padding:20px 0}.qualities-group{gap:28px;padding-right:28px}}
+@media(prefers-reduced-motion:reduce){.qualities-track,.about-photo .spin-star,.about-arrow:hover{animation:none!important}.qualities-track{width:100%}.qualities-group{flex-wrap:wrap;justify-content:center;gap:16px;padding:0 20px}.qualities-group+ .qualities-group{display:none}.qualities-group span{white-space:normal;font-size:18px}}
+
+
+/* Adaptación final: retícula 12 / 8 / 1 y control del desbordamiento */
+html{width:100%;overflow-x:clip}
+body{width:100%;min-width:0;overflow-x:clip}
+*,*::before,*::after{min-width:0}
+.wrap{width:100%;max-width:1440px;margin-inline:auto;padding-inline:clamp(20px,3vw,40px);display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
+.wrap>*{grid-column:1/-1}
+.hero{overflow:hidden;overflow:clip}
+.hero-stage{width:100%;isolation:isolate;container-type:inline-size}
+.hero-title{max-width:100%}
+.hero-solid{font-size:clamp(24px,10.5vw,150px);font-size:clamp(24px,10.5cqw,150px);line-height:1.05}
+.hero-ghost{font-size:clamp(30px,13.4vw,190px);font-size:clamp(30px,13.4cqw,190px);letter-spacing:-.045em;max-width:100%;transform:none}
+body > .nav{width:100%;max-width:1100px}
+body > .nav .wrap{display:flex;max-width:100%;padding:0}
+body > .nav-links{flex-wrap:wrap}
+.hero-div{width:100%;max-width:620px}
+#sobre-mi .wrap{width:100%;max-width:1440px;padding-inline:clamp(20px,3vw,40px)}
+.about-grid{grid-template-columns:repeat(12,minmax(0,1fr));gap:24px}
+.about-copy{grid-column:1/7;grid-row:1}
+.about-photo{grid-column:7/13;grid-row:1;width:100%;max-width:100%;margin:0;align-self:end}
+.about-photo img.photo{max-width:100%;width:100%;height:auto;max-height:760px}
+.about-title{font-size:clamp(30px,4.2vw,60px);overflow-wrap:normal}
+.about-title span{max-width:100%}
+.about-arrow{left:46%;width:clamp(80px,12vw,170px)}
+.about-photo .s1{width:clamp(100px,15vw,210px);right:-15px}
+.about-photo .s2{width:clamp(120px,18vw,250px);left:-30px}
+.skills{grid-template-columns:repeat(12,minmax(0,1fr))}.skill{grid-column:span 3}
+.proj-grid{grid-template-columns:repeat(12,minmax(0,1fr))}.proj{grid-column:span 4}
+.timeline{grid-template-columns:repeat(12,minmax(0,1fr))}.timeline li{grid-column:span 4}
+.proj-head,#educacion .sec-title,#experiencia .sec-title{font-size:clamp(30px,5vw,64px);overflow-wrap:anywhere}
+#contacto .big{font-size:clamp(36px,8vw,100px);overflow-wrap:anywhere}
+.contact-grid a{overflow-wrap:anywhere}
+.detail-layout{max-width:1440px;margin-inline:auto}.detail-title{font-size:clamp(36px,6vw,86px)}
+@media(min-width:701px) and (max-width:1023px){
+ .wrap{grid-template-columns:repeat(8,minmax(0,1fr));column-gap:20px}
+ .about-grid{grid-template-columns:repeat(8,minmax(0,1fr));gap:20px}
+ .about-copy{grid-column:1/5;grid-row:1}.about-photo{grid-column:5/9;grid-row:1;width:100%;margin:0}
+ .about-title{font-size:clamp(28px,4.1vw,42px)}
+ .about-arrow{width:90px;left:47%;top:105px}
+ .about-photo .s1{width:125px;right:-10px}.about-photo .s2{width:150px;left:-20px}
+ .skills,.proj-grid,.timeline{grid-template-columns:repeat(8,minmax(0,1fr))}
+ .skill,.proj,.timeline li{grid-column:span 4}
+ .detail-layout{grid-template-columns:1fr}.detail-copy{position:static}
+}
+@media(max-width:700px){
+ .wrap{grid-template-columns:minmax(0,1fr);gap:0;padding-inline:20px}
+ .hero{padding:20px 0 70px}body > .nav{margin-bottom:40px}
+ .hero-solid{font-size:10.5vw;font-size:10.5cqw}.hero-ghost{font-size:13.4vw;font-size:13.4cqw}
+ #sobre-mi{border-radius:30px 30px 0 0;padding-top:36px}
+ .about-grid{grid-template-columns:minmax(0,1fr);gap:0}
+ .about-copy{grid-column:1;grid-row:1;padding-bottom:28px!important}
+ .about-title{font-size:clamp(27px,6.8vw,46px)}
+ .about-photo{grid-column:1;grid-row:2;width:min(85%,400px);margin:0 0 0 auto}
+ .about-photo img.photo{max-height:500px}
+ .about-photo .s1{width:100px;right:0;top:20px}.about-photo .s2{display:none}
+ .about-arrow{width:85px;left:8%;top:auto;bottom:180px}
+ .skills,.proj-grid,.timeline{grid-template-columns:minmax(0,1fr)}
+ .skill,.proj,.timeline li{grid-column:1}
+ .proj>img{height:auto;aspect-ratio:4/3;object-fit:cover}
+ .contact-grid{grid-template-columns:minmax(0,1fr)}
+ .detail-layout{grid-template-columns:minmax(0,1fr);gap:28px}
+ .detail-copy{position:static}.detail-title{font-size:clamp(34px,10vw,60px)}
+ .detail-back{font-size:14px}.detail-description{font-size:16px}
+}
+
+
+/* Cursor de flecha azul con estrella, tamaño discreto */
+@media(hover:hover) and (pointer:fine){
+html,body,body *{cursor:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2232%22%20viewBox%3D%220%200%2028%2032%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22b%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%2316113c%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23000b79%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M3%202%2025%2017Q27%2019%2024%2020L15%2023%209%2030Q8%2031%207%2028Z%22%20fill%3D%22url%28%23b%29%22%20stroke%3D%22%233c66fe%22%20stroke-width%3D%222.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22m4%204%2020%2014-8-2-5%2010-3%203Z%22%20fill%3D%22%237cb5fb%22%20opacity%3D%22.15%22%2F%3E%3Cpath%20d%3D%22m13%2010%201.2%203%203.2.2-2.5%202%20%20.8%203.1-2.7-1.8-2.7%201.8.8-3.1-2.5-2%203.2-.2Z%22%20fill%3D%22%237cb5fb%22%20stroke%3D%22%23e5f2ff%22%20stroke-width%3D%22.4%22%2F%3E%3Cg%20fill%3D%22%23b8d9ff%22%3E%3Ccircle%20cx%3D%226%22%20cy%3D%227%22%20r%3D%22.65%22%2F%3E%3Ccircle%20cx%3D%228%22%20cy%3D%2212%22%20r%3D%22.5%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%2221%22%20r%3D%22.6%22%2F%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2218%22%20r%3D%22.55%22%2F%3E%3Ccircle%20cx%3D%2210%22%20cy%3D%229%22%20r%3D%22.4%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") 3 2,auto!important}
+input,textarea,[contenteditable="true"]{cursor:text!important}
+}
+
+/* Presentación más alta y retrato hasta el borde de la ventana */
+#sobre-mi{padding-top:40px}
+.about-copy{align-self:start;padding-top:0!important}
+#sobre-mi .about-photo{--photo-bleed:calc(max(0px,(100vw - 1440px)/2) + clamp(20px,3vw,40px));width:calc(100% + var(--photo-bleed));max-width:none;margin-right:calc(-1 * var(--photo-bleed))}
+#sobre-mi .about-photo img.photo{width:100%;max-width:none;max-height:none;object-position:bottom right}
+@media(max-width:700px){
+ #sobre-mi{padding-top:28px}
+ #sobre-mi .about-photo{--photo-bleed:clamp(20px,3vw,40px);width:calc(min(85%,400px) + var(--photo-bleed));margin-left:auto;margin-right:calc(-1 * var(--photo-bleed))}
+ #sobre-mi .about-photo img.photo{max-height:none}
+}
+
+
+/* Retrato contenido: el ancho de pantalla no aumenta su escala sin límite */
+@media(min-width:701px){
+ #sobre-mi .about-photo{height:clamp(480px,44vw,650px);align-self:end;display:flex;align-items:flex-end;justify-content:flex-end}
+ #sobre-mi .about-photo img.photo{width:auto;height:100%;max-width:100%;max-height:650px;object-fit:contain;object-position:right bottom;margin:0 0 0 auto;flex:0 1 auto}
+ #sobre-mi .about-photo .s1{right:-15px;top:5px;width:clamp(120px,14vw,210px)}
+ #sobre-mi .about-photo .s2{left:3%;bottom:25px;width:clamp(150px,18vw,250px);z-index:0}
+ .about-copy{padding-bottom:50px!important}
+}
+@media(min-width:701px) and (max-width:1023px){
+ #sobre-mi .about-photo{height:clamp(410px,55vw,560px)}
+ #sobre-mi .about-photo .s1{width:125px}.about-photo .s2{width:150px}
+}
+@media(max-width:700px){
+ #sobre-mi .about-photo{height:auto;max-height:460px}
+ #sobre-mi .about-photo img.photo{width:auto;height:auto;max-height:460px;max-width:100%;margin-left:auto}
+}
+
+
+/* Prueba de paleta: negro, azul eléctrico y plata */
+:root{--intense:#07134d;--electric:#174bff;--sky:#7299ff;--night:#050610;--white:#eeeeef;--black:#050505;--bg-brand:#050610;--bg-deep:#050610;--bg-light:#050505;--text-dark:#eeeeef;--text-light:#eeeeef}
+body{background:#050505;color:#eeeeef}
+.hero,#contacto{background-color:#020309;background-image:linear-gradient(110deg,rgba(0,0,0,.92),rgba(0,5,27,.65)),url("assets/img/fondo%20encabezado.png")}
+.hero-solid{color:#eeeeef}.hero-ghost{-webkit-text-stroke-color:#174bff}
+body > .nav,.hero .btn{background:rgba(20,28,56,.24);border-color:#ffffff35;box-shadow:inset 0 1px 0 #ffffff15,0 8px 30px #00000060}
+.hero-div::before,.hero-div::after{background:#a9a9b5}.scroll-hint{color:#7299ff}
+#sobre-mi,#educacion,#experiencia{background:#050505;color:#eeeeef}
+.about-hello{color:#eeeeef}.about-first{color:#aeb4c5}.about-last{color:#174bff}
+.about-bio,.about-list{color:#d0d0d8}.about-h{color:#eeeeef}.about-arrow{color:#174bff}
+.prog li{background:#174bff;color:#fff}
+.qualities-marquee{background:#080e2b;border-top:1px solid #174bff70;border-bottom:1px solid #174bff70}
+.qualities-group span{color:#eeeeef}.qualities-group span[aria-hidden]{color:#174bff}
+#habilidades{background:#050610;color:#eeeeef}#habilidades .eyebrow{color:#7299ff!important}
+.skill{background:#090b16;border:1px solid #ffffff24;box-shadow:none}.skill .num{color:#174bff}.skill .bar{background:#174bff}.tools li{background:#090b16;border:1px solid #ffffff24;color:#d0d0d8}
+#proyectos{background:#050817}.proj-head{color:#eeeeef}#proyectos .eyebrow{color:#7299ff}
+.folder{border-color:#ffffff35}.folder .f-label{color:#d0d0d8}.folder[aria-pressed="true"]{background:#174bff;border-color:#174bff}.folder[aria-pressed="true"] .f-label{color:#fff}
+#folder-count{color:#aeb4c5!important}
+.proj{background:#090c1a;border:1px solid #ffffff26;box-shadow:0 12px 30px #00000055}
+.proj::after{background:radial-gradient(circle at 6px 0,transparent 5px,#090c1a 5.5px) 0 0/12px 12px repeat-x}
+.proj .ov{color:#eeeeef}.proj .ov small{color:#7299ff;border-bottom-color:#ffffff30}.proj .meta{color:#aeb4c5}
+#educacion .sec-title,#experiencia .sec-title{color:#eeeeef}#educacion .eyebrow{color:#7299ff!important}
+.edu-block{border-color:#174bff}.edu-block .star{background:#050505;color:#174bff}.edu-block p{color:#d0d0d8}
+.timeline li{background:#090b16;border:1px solid #ffffff24}.timeline h3{color:#eeeeef}.timeline .dot{background:transparent;color:#174bff}.timeline p{color:#d0d0d8}
+#contacto .big{color:#eeeeef}#contacto .big-ghost{-webkit-text-stroke-color:#174bff}.contact-star{color:#174bff}
+footer{background:#020309;border-top:1px solid #174bff55;color:#aeb4c5}
+.project-detail{background:radial-gradient(ellipse at 85% 15%,#071344,transparent 55%),#050505}.detail-category{background:#174bff;color:#fff}.detail-title{color:#eeeeef}.detail-gallery img{background:#090c1a}
+
+
+/* Estrellas azules en la paleta oscura */
+.spin-star{filter:brightness(0) saturate(100%) invert(25%) sepia(100%) saturate(5100%) hue-rotate(225deg) brightness(105%) contrast(106%)}
+.hero-div span,.contact-star,.edu-block .star,.timeline .dot,.qualities-group span[aria-hidden]{color:var(--electric)}
+
+
+/* Textura original de la estrella indicada */
+.spin-star{filter:none}
+
+/* Portada azul texturizada con halo neón discreto */
+.hero{background:var(--intense) url("assets/img/fondo%20encabezado.png") center/cover no-repeat}
+.hero-stage{padding-block:clamp(48px,7vw,100px)}
+.hero-solid{color:#fff;text-shadow:0 0 2px #fff,0 0 10px rgba(124,181,251,.3),0 0 24px rgba(23,75,255,.24)}
+.hero-ghost{color:transparent;-webkit-text-stroke:1.5px rgba(80,102,255,.65);text-shadow:none}
+@media(max-width:700px){.hero-stage{padding-block:44px}.hero-solid{text-shadow:0 0 2px #fff,0 0 8px rgba(124,181,251,.25),0 0 16px rgba(23,75,255,.2)}}
+
+
+/* Papel más oscuro y letras con iluminación LED */
+.hero{background-image:linear-gradient(rgba(0,3,22,.32),rgba(0,3,22,.32)),url("assets/img/fondo%20encabezado.png")}
+.hero-solid{color:#fff;text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.8),0 0 14px rgba(153,195,255,.75),0 0 30px rgba(60,102,254,.7),0 0 55px rgba(23,75,255,.45)}
+@media(max-width:700px){.hero-solid{text-shadow:0 0 2px #fff,0 0 5px rgba(255,255,255,.75),0 0 12px rgba(153,195,255,.65),0 0 24px rgba(60,102,254,.55)}}
+
+
+/* Titileo LED desde la carga, con iluminación suave */
+.hero-solid{--led-glow:0 0 2px #fff,0 0 6px rgba(255,255,255,.8),0 0 14px rgba(153,195,255,.75),0 0 30px rgba(60,102,254,.7),0 0 55px rgba(23,75,255,.45);text-shadow:var(--led-glow);animation:led-flicker 9s linear infinite}
+@keyframes led-flicker{
+  0%,2%,4%,7%,61%,63%,65%,100%{opacity:1;text-shadow:var(--led-glow)}
+  1%,3%,62%,64%{opacity:.3;text-shadow:none}
+}
+@media(prefers-reduced-motion:reduce){.hero-solid{animation:none}}
+
+
+
+/* Título único, ligeramente más grande y adaptable */
+.hero-solid{font-size:clamp(24px,11.5vw,166px);font-size:clamp(24px,11.5cqw,166px)}
+
+/* Estrellas del retrato ligeramente más grandes */
+@media(min-width:1024px){
+ #sobre-mi .about-photo .s1{width:clamp(140px,16vw,240px)}
+ #sobre-mi .about-photo .s2{width:clamp(175px,21vw,290px)}
+}
+@media(min-width:701px) and (max-width:1023px){
+ #sobre-mi .about-photo .s1{width:145px}
+ #sobre-mi .about-photo .s2{width:175px}
+}
+@media(max-width:700px){#sobre-mi .about-photo .s1{width:115px}}
+
+
+/* Nuevo retrato ligeramente desplazado hacia la izquierda */
+#sobre-mi .about-photo img.photo{transform:translateX(-24px)}
+@media(max-width:700px){#sobre-mi .about-photo img.photo{transform:translateX(-12px)}}
+
+/* Estrella superior parcialmente detrás del retrato */
+@media(min-width:701px){#sobre-mi .about-photo .s1{right:40px}}
+@media(max-width:700px){#sobre-mi .about-photo .s1{right:20px}}
+
+
+/* Estrella superior un poco más grande */
+@media(min-width:1024px){#sobre-mi .about-photo .s1{width:clamp(160px,18.5vw,275px)}}
+@media(min-width:701px) and (max-width:1023px){#sobre-mi .about-photo .s1{width:165px}}
+@media(max-width:700px){#sobre-mi .about-photo .s1{width:130px}}
+
+
+/* Separadores planos de cinco puntas */
+.qualities-group .quality-star{display:inline-block;width:26px;height:26px;flex:0 0 26px;background:var(--electric);clip-path:polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 94%,50% 72%,21% 94%,32% 57%,2% 35%,39% 35%)}
+@media(max-width:700px){.qualities-group .quality-star{width:20px;height:20px;flex-basis:20px}}
+
+/* Título ampliado dentro de los márgenes y datos de portada */
+.hero-solid{font-size:clamp(24px,12vw,173px);font-size:clamp(24px,12cqw,173px)}
+.hero-discipline{font-family:var(--body);font-size:clamp(18px,3.2vw,38px);line-height:1.2;color:#fff;margin:28px 0 0;text-wrap:balance}
+.hero-edition{font-family:var(--body);font-size:clamp(28px,4.2vw,50px);line-height:1.15;color:#7cb5fb;margin:14px 0 0}
+@media(max-width:700px){.hero-discipline{margin-top:22px}.hero-edition{margin-top:12px}}
+
+/* Portada editorial con serifas y marco circular de luz azul */
+.hero{position:relative;isolation:isolate;background-image:linear-gradient(rgba(0,2,16,.78),rgba(0,2,16,.78)),url("assets/img/fondo%20encabezado.png");padding-bottom:76px}
+.hero::before{content:"";position:absolute;z-index:-1;pointer-events:none;width:min(108vw,1500px);aspect-ratio:1;left:50%;top:50%;transform:translate(-50%,-50%);border-radius:50%;border:1px solid #3c66fe99;box-shadow:0 0 40px #174bff55,inset 0 0 55px #174bff55;background:radial-gradient(ellipse,transparent 62%,rgba(23,75,255,.13) 70%,rgba(60,102,254,.28) 75%,transparent 83%)}
+body > .nav{margin-bottom:clamp(36px,6vw,80px)}
+.hero-editorial{padding-block:20px 24px;max-width:1160px;margin-inline:auto;width:100%}
+.hero-kicker{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:10px;padding-inline:3%}
+.hero-kicker .hero-discipline,.hero-kicker .hero-edition{margin:0;font-family:Arial,Helvetica,sans-serif;font-size:clamp(10px,1.35vw,17px);font-weight:800;line-height:1.3;text-transform:uppercase;letter-spacing:.035em;color:#7299ff}
+.hero-kicker .hero-edition{white-space:nowrap}.hero-kicker .hero-edition span{color:#fff;margin-left:8px}
+.hero-editorial .hero-title{line-height:.88}
+.hero-editorial .hero-solid{font-family:Didot,'Bodoni MT','Times New Roman',serif;font-weight:700;letter-spacing:-.065em;font-size:clamp(30px,15vw,210px);font-size:clamp(30px,17cqw,210px);line-height:.95;transform:scaleX(.9);transform-origin:center;white-space:nowrap;color:#fff}
+.hero-signature{border-top:1px solid #3c66fe88;margin:22px 3% 0;padding-top:15px;font-size:clamp(10px,1.2vw,14px);font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#7299ff}
+.hero .hero-div{margin-top:12px;max-width:420px}.hero .hero-div span{color:#fff;text-shadow:0 0 12px #7299ff}
+@media(max-width:700px){body > .nav{margin-bottom:32px}.hero-editorial{padding-block:20px}.hero-kicker{gap:10px;padding-inline:0}.hero-kicker .hero-discipline{max-width:65%;text-align:left}.hero-kicker .hero-edition{font-size:10px}.hero-editorial .hero-solid{font-size:17cqw}.hero-signature{letter-spacing:.08em;font-size:10px;margin-top:16px}.hero::before{width:140vw}.hero{padding-bottom:65px}}
+
+
+/* Acercar los controles al título tras retirar la firma */
+.hero-editorial{padding-bottom:8px}
+.hero .hero-div{margin-top:0}
+
+/* Primera pantalla dedicada a la portada */
+.hero{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-block:32px 48px}
+.hero>.wrap{flex:1;align-content:center}
+body > .nav{margin-bottom:clamp(36px,7vh,80px)}
+#sobre-mi{margin-top:0}
+@media(max-width:700px){.hero{padding-block:20px 36px}body > .nav{margin-bottom:32px}}
+
+
+/* Papel azul visible detrás de las esquinas curvas de Sobre mí */
+#contenido{background:#07134d url("assets/img/fondo%20encabezado.png") center top/cover no-repeat}
+#sobre-mi{border-radius:64px 64px 0 0;margin-top:0;position:relative;overflow:hidden}
+@media(max-width:700px){#sobre-mi{border-radius:36px 36px 0 0}}
+
+
+/* LED encendido desde el inicio, con respiración suave de luz */
+.hero-solid{opacity:1;--led-glow:0 0 2px #fff,0 0 7px rgba(255,255,255,.9),0 0 18px rgba(153,195,255,.9),0 0 38px rgba(60,102,254,.8),0 0 65px rgba(23,75,255,.55);text-shadow:var(--led-glow);animation:led-glow 4s ease-in-out infinite}
+@keyframes led-glow{
+  0%,100%{text-shadow:var(--led-glow)}
+  50%{text-shadow:0 0 2px #fff,0 0 6px rgba(255,255,255,.85),0 0 14px rgba(153,195,255,.75),0 0 30px rgba(60,102,254,.65),0 0 52px rgba(23,75,255,.45)}
+}
+@media(prefers-reduced-motion:reduce){.hero-solid{animation:none;text-shadow:var(--led-glow)}}
+
+
+/* Portada centrada, navegación superior y pulsación LED visible */
+.hero{padding-top:120px;padding-bottom:60px}
+body > .nav{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:calc(100% - 64px);max-width:1100px;margin:0}
+.hero>.wrap{align-content:center;justify-items:center}
+.hero-editorial{width:100%;max-width:1160px;margin-inline:auto;text-align:center}
+.hero-editorial .hero-title{width:100%;text-align:center}
+.hero-editorial .hero-solid{display:block;width:100%;font-size:clamp(30px,15vw,185px);font-size:clamp(30px,15cqw,185px);letter-spacing:-.055em;transform:none;text-align:center;animation:led-pulse-visible 2.8s ease-in-out infinite}
+.hero-kicker{width:100%;padding-inline:2%}
+.hero .hero-div{margin-inline:auto}
+@keyframes led-pulse-visible{
+  0%,100%{opacity:1;text-shadow:var(--led-glow)}
+  45%{opacity:.78;text-shadow:0 0 2px #fff,0 0 5px rgba(153,195,255,.5),0 0 12px rgba(60,102,254,.3)}
+  65%{opacity:1;text-shadow:var(--led-glow)}
+}
+@media(max-width:700px){.hero{padding-top:100px;padding-bottom:44px}body > .nav{top:16px;width:calc(100% - 40px);margin:0}.hero-editorial .hero-solid{font-size:15cqw}.hero:has(.nav.open){padding-top:220px}}
+@media(prefers-reduced-motion:reduce){.hero-editorial .hero-solid{animation:none;opacity:1}}
+
+
+/* Separación adicional bajo el título */
+.hero .hero-div{margin-top:18px}
+
+/* Habilidades en columnas editoriales */
+#habilidades{background:#050610;padding-block:52px}
+#habilidades .skills{gap:0;margin-top:36px}
+#habilidades .skill{background:transparent;border:0;border-left:1px solid #ffffff25;border-radius:0;box-shadow:none;padding:26px clamp(18px,3vw,44px) 32px}
+#habilidades .skill .num{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-weight:900;font-size:clamp(64px,7.5vw,108px);line-height:1;color:var(--electric);letter-spacing:-.04em;text-shadow:0 0 14px #174bff30}
+#habilidades .skill .cat{font-size:clamp(14px,1.5vw,20px);font-weight:700;line-height:1.35;text-transform:uppercase;color:#d0d0d8;max-width:190px;margin-top:24px}
+#habilidades .skill .bar{display:none}
+@media(max-width:700px){#habilidades .skills{gap:0}#habilidades .skill{padding:22px 24px;border-left:1px solid #ffffff25;border-bottom:1px solid #ffffff15}#habilidades .skill .num{font-size:64px}#habilidades .skill .cat{margin-top:14px;max-width:none}}
+
+
+/* Encabezados de sección con tamaño y tono uniformes */
+#educacion .sec-title,#experiencia .sec-title,#proyectos .proj-head,#habilidades .sec-title{
+ font-family:var(--display);font-size:clamp(30px,4.5vw,56px);font-weight:900;line-height:1.05;letter-spacing:0;text-transform:uppercase;color:#eeeeef;
+}
+
+
+/* Galerías de proyecto en carrusel horizontal */
+.detail-carousel{min-width:0;width:100%}
+.detail-gallery{display:flex;gap:0;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--electric) #090c1a;border-radius:6px;touch-action:pan-x pan-y}
+.detail-gallery img{flex:0 0 100%;width:100%;min-width:100%;max-width:100%;height:clamp(280px,65vh,720px);object-fit:contain;scroll-snap-align:start;scroll-snap-stop:always;user-select:none;-webkit-user-drag:none}
+.detail-gallery.dragging{scroll-snap-type:none}
+.carousel-controls{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:20px;color:#d0d0d8;font-size:14px}
+.carousel-controls button{width:44px;height:44px;border:1px solid #7299ff66;border-radius:50%;background:#ffffff0c;color:#fff;font-size:24px}
+.carousel-controls button:hover{background:var(--electric)}.carousel-controls button:disabled{opacity:.3}
+.carousel-hint{text-align:center;color:var(--sky);font-size:13px;margin-top:12px}
+@media(max-width:700px){.detail-gallery img{height:clamp(260px,55svh,500px)}}
+
+
+/* Portafolio con la misma familia condensada de los números de habilidades */
+.hero-editorial .hero-solid{font-family:Impact,'Arial Narrow',Arial,sans-serif;font-weight:900;letter-spacing:-.025em;color:#fff;font-size:clamp(30px,14vw,185px);font-size:clamp(30px,14cqw,185px);line-height:1.05}
+
+
+/* Interletrado más abierto del título principal */
+.hero-editorial .hero-solid{letter-spacing:.045em;padding-left:.045em}
+
+/* Composición de portada con palabra monumental de fondo */
+.hero::after{content:"PORTAFOLIO";position:absolute;z-index:-1;pointer-events:none;left:50%;top:52%;transform:translate(-50%,-50%) scaleY(3.2);font-family:Impact,'Arial Narrow',Arial,sans-serif;font-size:13.2vw;line-height:1;letter-spacing:.01em;white-space:nowrap;color:rgba(4,15,114,.52)}
+.hero-editorial{max-width:1160px;padding-block:18px 16px}
+.hero-editorial .hero-solid{font-family:'Arial Black',Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(30px,11.5vw,160px);font-size:clamp(30px,11.5cqw,160px);letter-spacing:-.035em;padding-left:0;line-height:1.04;color:#fff}
+.hero-kicker{padding-inline:1%;margin-bottom:12px;align-items:center}
+.hero-kicker .hero-discipline{color:#3c66fe;text-transform:none;font-weight:800;letter-spacing:0;font-size:clamp(13px,1.65vw,23px)}
+.hero-kicker .hero-edition,.hero-kicker .hero-edition span{color:#3c66fe;font-size:clamp(16px,1.9vw,26px);font-weight:900;margin:0;letter-spacing:0}
+.hero .hero-div{max-width:420px;margin-top:24px}
+@media(max-width:700px){.hero::after{font-size:13.2vw;transform:translate(-50%,-50%) scaleY(4)}.hero-editorial .hero-solid{font-size:11.5cqw}.hero-kicker .hero-discipline{font-size:clamp(11px,2.8vw,16px)}.hero-kicker .hero-edition span{font-size:18px}.hero-kicker{margin-bottom:16px}}
+
+
+/* Ajuste de la portada a la composición de referencia */
+.hero{padding-top:150px;padding-bottom:38px}
+body > .nav{top:10px;max-width:1100px;padding:14px 20px;border-radius:30px;background:rgba(5,9,31,.88)}
+.hero>.wrap{align-content:center;position:relative;padding-top:clamp(40px,9vh,100px)}
+.hero-editorial{max-width:1000px;width:100%;padding-block:0 18px}
+.hero-editorial .hero-solid{font-family:'Arial Black',Arial,Helvetica,sans-serif;font-weight:900;font-size:clamp(30px,12vw,160px);font-size:clamp(30px,12cqw,160px);letter-spacing:-.045em;line-height:1.05}
+.hero-kicker{margin-bottom:4px;padding-inline:1%;gap:16px}
+.hero-kicker .hero-discipline{font-size:clamp(12px,1.6vw,22px)}
+.hero-kicker .hero-edition span{font-size:clamp(16px,1.85vw,26px)}
+.hero::after{top:57%;font-size:14vw;transform:translate(-50%,-50%) scaleY(3.7);color:rgba(3,9,87,.78);letter-spacing:0}
+.hero .hero-div{margin-top:20px;max-width:none;gap:0}
+.hero .hero-div::before,.hero .hero-div::after{display:none}
+.hero .hero-div span{font-size:40px;line-height:1.1;text-shadow:0 0 10px #7299ff55}
+.hero .btn{background:#000;border:1.5px solid #fff;border-radius:14px;padding:14px 28px;font-family:Arial,Helvetica,sans-serif;font-size:clamp(15px,1.7vw,22px);font-weight:900;text-transform:none;box-shadow:none}
+.hero .btn:hover,.hero .btn:focus-visible,.hero .btn:active{background:var(--electric);border-color:#fff;color:#fff}
+.hero .scroll-hint{margin-top:24px}
+@media(max-width:700px){.hero{padding-top:110px;padding-bottom:32px}body > .nav{top:14px;padding:10px}.hero>.wrap{padding-top:30px}.hero-editorial .hero-solid{font-size:12cqw}.hero::after{font-size:14vw;transform:translate(-50%,-50%) scaleY(4.5)}.hero .hero-div{margin-top:18px}.hero .hero-div span{font-size:32px}.hero .btn{padding:13px 24px;font-size:16px}.hero-kicker .hero-discipline{font-size:11px}.hero-kicker .hero-edition span{font-size:16px}}
+
+
+/* Portada de referencia: aro neón, tipografía monumental y contenido central */
+.hero{min-height:100vh;min-height:100svh;padding:120px 0 48px;background-image:radial-gradient(ellipse at center,rgba(0,1,18,.93) 20%,rgba(0,3,25,.65) 66%,rgba(0,3,25,.35)),url("assets/img/fondo%20encabezado.png")}
+.hero::after{display:none}
+.hero::before{z-index:-1;left:50%;top:52%;width:80%;height:150%;aspect-ratio:auto;border:2px solid #6ed5ff;border-radius:50%;background:none;box-shadow:0 0 5px #b7eeff,0 0 16px #0080ff,0 0 40px #004bff,inset 0 0 18px #006aff,inset 0 0 50px #003cff80}
+.hero-background-word{position:absolute;z-index:-1;left:15%;top:17%;width:70%;height:69%;opacity:.8;pointer-events:none}
+body > .nav{top:18px;max-width:1100px;width:calc(100% - 64px);padding:12px 16px;background:rgba(4,8,28,.8)}
+.hero>.wrap{width:100%;max-width:1440px;padding-top:0;align-content:center;justify-items:center}
+.hero-editorial{width:76%;max-width:1100px;padding:0;margin:0 auto}
+.hero-kicker{padding-inline:1%;margin-bottom:4px}
+.hero-kicker .hero-discipline,.hero-kicker .hero-edition span{color:#1262ff;font-size:clamp(12px,1.55vw,24px);font-weight:900}
+.hero-editorial .hero-solid{font-family:'Arial Black',Arial,Helvetica,sans-serif;font-weight:900;font-size:12cqw;letter-spacing:-.05em;line-height:1.05;animation:led-pulse-visible 2.8s ease-in-out infinite}
+.hero .hero-div{width:76%;max-width:1100px;display:flex;gap:18px;margin-top:18px}
+.hero .hero-div::before,.hero .hero-div::after{display:block;content:"";height:1px;flex:1;background:#d9dce7}
+.hero .hero-div span{font-size:36px;color:#fff}
+.hero .btn{background:rgba(3,8,29,.65);border:1px solid #1769ff;box-shadow:0 0 5px #174bff80,inset 0 0 12px #174bff20;border-radius:12px;font-size:clamp(15px,1.4vw,20px);padding:14px 28px}
+.hero .btn:hover,.hero .btn:focus-visible{background:var(--electric);box-shadow:0 0 18px #174bff88;border-color:#7299ff}
+.hero .scroll-hint{font-size:12px;margin-top:22px}
+@media(max-width:700px){.hero{padding:110px 0 36px}body > .nav{top:16px;width:calc(100% - 40px)}.hero-editorial,.hero .hero-div{width:100%}.hero-background-word{left:4%;width:92%;top:25%;height:55%}.hero::before{width:118%;height:125%}.hero-kicker .hero-discipline{font-size:11px}.hero-kicker .hero-edition span{font-size:16px}.hero .hero-div span{font-size:28px}.hero .hero-div{gap:12px}}
+@media(prefers-reduced-motion:reduce){.hero-editorial .hero-solid{animation:none}}
+
+
+/* Portada con la imagen original y zonas interactivas */
+.hero.hero-image-cover{height:100svh;min-height:560px;padding:0;display:block;overflow:hidden;background:#02051c;isolation:isolate}
+.hero-image-cover::before,.hero-image-cover::after{display:none}
+.cover-art{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:fill;z-index:-2}
+.cover-light{position:absolute;inset:0;z-index:-1;pointer-events:none;background:#fff;mask-image:url("assets/img/portada%20portafolio@300x.png");mask-mode:luminance;mask-size:100% 100%;mask-repeat:no-repeat;filter:blur(5px);mix-blend-mode:screen;opacity:.65;animation:cover-led 2.8s ease-in-out infinite}
+@keyframes cover-led{0%,100%{opacity:.7;filter:blur(5px)}45%{opacity:.35;filter:blur(3px)}65%{opacity:.7;filter:blur(5px)}}
+.hero-image-cover .nav{top:18px;left:50%;width:calc(100% - 64px);max-width:1100px;margin:0;z-index:5}
+.cover-project-link{position:absolute;left:40.2%;top:75.5%;width:18.3%;height:7.5%;border-radius:16px}
+.cover-project-link:hover,.cover-project-link:focus-visible{background:#174bff25;box-shadow:0 0 20px #174bff99;outline:2px solid #7299ff}
+.cover-scroll{position:absolute;bottom:3%;left:50%;transform:translateX(-50%);color:#7299ff;font-size:12px;text-transform:uppercase;letter-spacing:.12em;text-decoration:none}
+.cover-accessible{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+@media(max-width:700px){.hero.hero-image-cover{min-height:520px}.hero-image-cover .nav{top:14px;width:calc(100% - 32px)}.cover-project-link{left:32%;width:36%}.cover-scroll{font-size:11px}}
+@media(prefers-reduced-motion:reduce){.cover-light{animation:none}}
+
+
+.hero-image-cover::before{display:block;z-index:-1;left:50%;top:50%;width:99.5%;height:148%;border:1px solid #5bbaff;box-shadow:0 0 8px #177bff,0 0 24px #004bff99,inset 0 0 14px #006aff80;background:none;pointer-events:none}
+
+/* Resplandor LED concentrado en el título de la imagen */
+.cover-light{clip-path:inset(43% 8% 34% 8%);background:#edf5ff;opacity:1;filter:blur(4px) drop-shadow(0 0 10px #8fbaff) drop-shadow(0 0 24px #3c66fe);animation:cover-title-led 2.8s ease-in-out infinite}
+@keyframes cover-title-led{
+  0%,65%,100%{opacity:1;filter:blur(4px) drop-shadow(0 0 10px #b1d0ff) drop-shadow(0 0 24px #3c66fe)}
+  45%{opacity:.55;filter:blur(2px) drop-shadow(0 0 5px #7299ff) drop-shadow(0 0 12px #174bff)}
+}
+@media(prefers-reduced-motion:reduce){.cover-light{animation:none;opacity:1}}
+
+
+/* Portada editorial con luz que enciende y apaga */
+.hero.hero-neon-editorial{min-height:100svh;padding:130px 0 44px;background:radial-gradient(ellipse at center,#03051a 35%,#02030b 75%);isolation:isolate}
+.hero-neon-editorial::after{display:none}
+.hero-neon-editorial::before{display:block;width:92%;height:155%;top:50%;left:50%;border:1px solid #3c66fe;background:none;box-shadow:0 0 25px #174bff99,0 0 65px #174bff66,inset 0 0 45px #174bff66}
+.hero-neon-editorial .nav{top:18px;margin:0}
+.hero-neon-editorial>.wrap{padding-top:0;align-content:center}
+.neon-composition{width:100%;max-width:1100px;margin:auto;container-type:inline-size;text-align:center}
+.neon-meta{display:flex;justify-content:space-between;gap:20px;margin-bottom:30px;padding-inline:2%;font-family:Arial,sans-serif;font-size:clamp(11px,1.5vw,20px);font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#7299ff}
+.neon-meta span{color:#eee}
+.neon-title{font-family:Didot,'Bodoni MT','Times New Roman',serif;font-weight:700;font-size:16cqw;letter-spacing:-.065em;line-height:1.05;color:#fff;transform:scaleY(1.35);margin:24px 0 42px;white-space:nowrap;animation:editorial-led-switch 4.8s ease-in-out infinite}
+@keyframes editorial-led-switch{
+  0%,25%,55%,100%{text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.8),0 0 20px rgba(166,195,255,.65),0 0 36px rgba(60,102,254,.4)}
+  35%,45%{text-shadow:none}
+}
+
+.neon-rule{height:1px;background:#3c66fe80;width:96%;margin:0 auto 24px}
+.neon-disciplines{color:#7299ff;font-size:12px;line-height:1.4;text-transform:uppercase;font-weight:700;letter-spacing:.07em;margin-bottom:24px}
+.hero-neon-editorial .btn{background:#05091c80;border:1px solid #3c66fe;border-radius:12px;color:#fff;box-shadow:0 0 12px #174bff40}
+.hero-neon-editorial .scroll-hint{margin-top:22px}
+@media(max-width:700px){.hero.hero-neon-editorial{padding-top:115px}.neon-meta{font-size:10px;gap:10px}.neon-meta p:first-child{text-align:left}.neon-meta p:last-child{white-space:nowrap}.neon-title{margin-top:30px;margin-bottom:34px}.hero-neon-editorial::before{width:125%;height:125%}}
+@media(prefers-reduced-motion:reduce){.neon-title{animation:none;text-shadow:0 0 7px #dceaff,0 0 20px #7299ff,0 0 42px #174bff}}
+
+
+/* Separador y contornos neón al interactuar */
+.neon-divider{display:flex;align-items:center;gap:20px;width:96%;margin:0 auto 28px;color:#fff}
+.neon-divider::before,.neon-divider::after{content:"";height:1px;background:#eee;flex:1}
+.neon-divider span{font-size:36px;line-height:1}
+body > .nav-links a{transition:border-color .2s,box-shadow .2s,background .2s}
+body > .nav-links a:hover,body > .nav-links a:focus-visible,body > .nav-links a:active,
+.hero-neon-editorial .btn:hover,.hero-neon-editorial .btn:focus-visible,.hero-neon-editorial .btn:active{
+ color:#eee;background:rgba(6,15,58,.8);border-color:#7299ff;box-shadow:0 0 0 1px #7299ff,0 0 10px #3c66feaa,0 0 24px #174bff77,inset 0 0 8px #174bff30;transform:none;
+}
+@media(max-width:700px){.neon-divider{gap:14px;margin-bottom:24px}.neon-divider span{font-size:28px}}
+
+
+@media(prefers-reduced-motion:reduce){.neon-title{text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.8),0 0 20px rgba(166,195,255,.65),0 0 36px rgba(60,102,254,.4)}}
+
+/* Contacto según la referencia: título único y datos reales */
+#contacto{background:#000b79 url("assets/img/fondo%20encabezado.png") center/cover no-repeat;border-radius:0;padding:clamp(100px,18vw,260px) 0 36px;color:#fff}
+#contacto .wrap{max-width:1440px}
+#contacto .big{font-family:var(--display);font-size:clamp(42px,10.5vw,150px);line-height:1;letter-spacing:-.025em;color:#fff;text-align:center;margin:0}
+.contact-divider{display:flex;align-items:center;gap:20px;width:76%;margin:24px auto 0}
+.contact-divider::before,.contact-divider::after{content:"";height:2px;background:#7cb5fb;flex:1}
+.contact-divider span{color:#fff;font-size:clamp(30px,4vw,48px);line-height:1}
+#contacto .contact-grid{display:grid;grid-template-columns:1fr 1fr 1.35fr;gap:36px;width:100%;max-width:none;margin:clamp(60px,9vw,130px) 0 0;text-align:left;align-items:start}
+#contacto .contact-grid h3{font-family:var(--display);font-size:clamp(22px,3vw,40px);line-height:1.15;margin-bottom:10px;color:#fff}
+#contacto .contact-grid a{font-family:Arial,Helvetica,sans-serif;font-size:clamp(14px,1.7vw,23px);line-height:1.4;color:#7cb5fb;text-decoration:none;overflow-wrap:anywhere}
+#contacto .contact-grid a:hover,#contacto .contact-grid a:focus-visible{color:#fff;text-decoration:underline}
+@media(max-width:900px){#contacto .contact-grid{gap:24px;grid-template-columns:1fr 1fr}#contacto .contact-grid>div:last-child{grid-column:1/-1}}
+@media(max-width:600px){#contacto{padding-top:80px}#contacto .contact-grid{grid-template-columns:1fr;margin-top:50px;gap:30px}#contacto .contact-grid>div:last-child{grid-column:1}.contact-divider{width:92%;gap:14px}#contacto .contact-grid h3{font-size:24px}#contacto .contact-grid a{font-size:16px}}
+
+
+/* Logo MSR junto a Inicio */
+body > .nav .wrap{display:flex;flex-direction:row;align-items:center;gap:16px}
+.header-logo{display:flex;align-items:center;flex:0 0 100px;padding:6px;border-radius:8px}
+.header-logo img{width:100%;height:auto;display:block}
+body > .nav nav{flex:1;min-width:0}
+body > .nav-links{gap:3px;justify-content:space-evenly}
+body > .nav-links a{padding-inline:10px}
+@media(max-width:700px){
+ body > .nav .wrap{display:grid;grid-template-columns:1fr auto;gap:0 16px}
+ body > .nav .wrap>*{grid-column:auto}
+ .header-logo{width:95px;justify-self:start}
+ body > .nav .burger{grid-column:2;justify-self:end}
+ body > .nav nav{grid-column:1/-1;width:100%}
+ body > .nav.open .nav-links{display:flex}
+}
+
+
+/* Logo proporcionado con la altura de los textos del menú */
+body > .nav .header-logo{flex:0 0 72px;width:72px;padding:4px}
+@media(max-width:700px){body > .nav .header-logo{width:68px}}
+
+/* Botones con el mismo contorno luminoso que la navegación */
+body :is(button,.btn,.detail-back){background:rgba(6,10,32,.8);color:#eeeeef;border:1px solid #ffffff35;transition:background .2s,border-color .2s,box-shadow .2s;color-scheme:dark}
+body :is(button,.btn,.detail-back):is(:hover,:focus-visible,:active):not(:disabled),
+body .folder[aria-pressed="true"]{
+ background:rgba(6,15,58,.85);color:#eeeeef;border-color:#7299ff;box-shadow:0 0 0 1px #7299ff,0 0 10px #3c66feaa,0 0 24px #174bff77,inset 0 0 8px #174bff30;transform:none;
+}
+body .folder .f-label,body .folder[aria-pressed="true"] .f-label{color:#eeeeef}
+body .folder{border-radius:24px}
+body .carousel-controls button:disabled{background:#090c1a;border-color:#ffffff20;box-shadow:none;opacity:.3}
+
+
+/* Imágenes de cada proyecto en cuadrícula, sin carrusel */
+.project-detail .detail-layout{display:block}
+.project-detail .detail-copy{position:static;max-width:1000px;padding-bottom:32px}
+.project-detail .detail-title{font-size:clamp(36px,5vw,72px);outline:none}
+.project-detail .detail-description{max-width:760px}
+.project-detail .detail-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;overflow:visible;scroll-snap-type:none;touch-action:auto;border-radius:0}
+.project-detail .detail-gallery img{width:100%;min-width:0;max-width:100%;height:auto;aspect-ratio:4/3;object-fit:contain;background:#090c1a;border-radius:6px;scroll-snap-align:none;user-select:auto}
+.project-detail .detail-gallery img:only-child{grid-column:1/-1;aspect-ratio:auto;max-height:80vh}
+@media(max-width:1023px){.project-detail .detail-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}}
+@media(max-width:600px){.project-detail .detail-gallery{grid-template-columns:minmax(0,1fr);gap:18px}.project-detail .detail-gallery img{aspect-ratio:auto;height:auto}}
+
+
+/* Presentación automática de cada proyecto en un único cuadro amplio */
+.project-player{width:100%;min-width:0}
+.project-detail .detail-gallery{position:relative;display:block;width:100%;height:clamp(320px,73vh,900px);height:clamp(320px,73svh,900px);overflow:hidden;background:#090c1a;border-radius:10px}
+.project-detail .detail-gallery img,.project-detail .detail-gallery img:only-child{position:absolute;inset:0;width:100%;height:100%;min-width:0;max-width:100%;max-height:none;aspect-ratio:auto;object-fit:contain;opacity:0;transition:opacity .65s ease;pointer-events:none}
+.project-detail .detail-gallery img.slide-active{opacity:1;z-index:1}
+.player-controls{display:flex;align-items:center;justify-content:center;gap:18px;margin-top:18px;font-size:14px;color:#aeb4c5}
+.player-controls button{border-radius:24px;padding:10px 18px;font-size:14px;min-height:42px}
+@media(max-width:600px){.project-detail .detail-gallery{height:clamp(260px,55svh,520px)}.player-controls{gap:10px}.player-controls button{padding:10px 14px}}
+@media(prefers-reduced-motion:reduce){.project-detail .detail-gallery img{transition:none}}
+
+
+/* Galería uniforme con imágenes completas y detalles de estrellas */
+.project-detail .detail-gallery{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;width:100%;height:auto;overflow:visible;background:transparent;border-radius:0;padding-top:26px;border-top:1px solid #7299ff55}
+.project-detail .detail-gallery::before{content:"★";position:absolute;right:0;top:-18px;padding-left:16px;background:#050610;color:var(--electric);font-size:26px;line-height:32px}
+.project-detail .detail-gallery img,.project-detail .detail-gallery img:only-child{position:static;inset:auto;display:block;width:100%;min-width:0;max-width:100%;height:auto;max-height:none;aspect-ratio:4/3;object-fit:contain;box-sizing:border-box;padding:12px;background:#090c1a;border:1px solid #ffffff18;border-radius:10px;opacity:1;transition:none;pointer-events:auto;grid-column:auto}
+.project-detail .detail-gallery img:only-child{grid-column:1/-1;aspect-ratio:16/9;max-height:80vh}
+.project-detail .detail-count::before{content:"★";color:var(--electric);margin-right:10px;font-size:16px}
+@media(max-width:1023px){.project-detail .detail-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}}
+@media(max-width:600px){.project-detail .detail-gallery{grid-template-columns:minmax(0,1fr);gap:18px}.project-detail .detail-gallery img,.project-detail .detail-gallery img:only-child{aspect-ratio:4/3;padding:8px}}
+
+
+/* Estrella de papel original y profundidad en las piezas */
+.project-detail .detail-gallery::before{content:"";width:44px;height:44px;top:-23px;padding:0;background:transparent url("assets/img/estrella%20azuul@300x.png") center/contain no-repeat;filter:drop-shadow(0 0 5px #174bff66)}
+.project-detail .detail-count::before{content:"";display:inline-block;width:22px;height:22px;vertical-align:middle;background:url("assets/img/estrella%20azuul@300x.png") center/contain no-repeat}
+.project-piece{position:relative;margin:0;min-width:0;overflow:hidden;border:1px solid #7299ff30;border-radius:12px;background:linear-gradient(145deg,#111831,#070a17);box-shadow:0 10px 24px #00000055;transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;isolation:isolate}
+.project-detail .detail-gallery .project-piece img{position:static;width:100%;height:auto;max-height:none;aspect-ratio:4/3;object-fit:contain;padding:12px;display:block;background:transparent;border:0;border-radius:0;opacity:1;transition:transform .45s ease;grid-column:auto}
+.project-piece::after{content:"";position:absolute;inset:-50%;pointer-events:none;background:linear-gradient(115deg,transparent 38%,#ffffff12 47%,#b8d9ff28 50%,transparent 59%);transform:translateX(-75%);opacity:0;transition:transform .7s ease,opacity .35s ease}
+@media(hover:hover){.project-piece:hover{transform:translateY(-7px);border-color:#7299ff;box-shadow:0 16px 35px #00000080,0 0 18px #174bff40}.project-piece:hover img{transform:scale(1.035)}.project-piece:hover::after{transform:translateX(65%);opacity:1}}
+.project-piece:focus-visible{outline:2px solid #7299ff;outline-offset:4px;transform:translateY(-5px);box-shadow:0 0 20px #174bff55}
+.project-detail .detail-gallery .project-piece:only-child{grid-column:1/-1;max-width:1100px;width:100%;justify-self:center}
+.project-detail .detail-gallery .project-piece:only-child img{aspect-ratio:16/9}
+@media(prefers-reduced-motion:reduce){.project-piece,.project-piece img,.project-piece::after{transition:none!important}.project-piece:hover,.project-piece:hover img,.project-piece:focus-visible{transform:none}}
+
+
+/* Fondo negro y título de proyecto blanco */
+body.project-view,.project-detail{background:#000}
+.project-detail .detail-title{color:#fff}
+.project-detail .detail-gallery::before{background-color:transparent}
+
+/* Piezas cuadradas sin bandas ni relleno interior */
+.project-detail .detail-gallery .project-piece img,
+.project-detail .detail-gallery .project-piece:only-child img{
+ width:100%;height:auto;aspect-ratio:1/1;object-fit:cover;object-position:center;padding:0;
+}
+.project-detail .detail-gallery .project-piece:only-child{max-width:850px}
+
+
+/* Imagen completa con entrada de tarjeta, sin cambiar la posición de la galería */
+.image-viewer{position:fixed;inset:0;margin:auto;width:100vw;height:100dvh;max-width:100vw;max-height:100dvh;padding:clamp(20px,4vw,60px);border:0;background:transparent;overflow:hidden}
+.image-viewer::backdrop{background:rgba(0,0,0,.88);backdrop-filter:blur(8px)}
+.image-viewer-card{position:relative;width:100%;height:100%;display:flex;align-items:center;justify-content:center;pointer-events:auto}
+.image-viewer-card img{display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;border-radius:10px;box-shadow:0 24px 80px #0009;animation:image-card-open .32s cubic-bezier(.2,.75,.25,1) both}
+.image-viewer-close{position:fixed;right:18px;top:14px;z-index:2;border-radius:50%;width:42px;height:42px;font-size:28px;line-height:1}
+@keyframes image-card-open{from{opacity:0;transform:perspective(1200px) translateY(30px) rotateX(7deg) scale(.88)}to{opacity:1;transform:perspective(1200px) translateY(0) rotateX(0) scale(1)}}
+body:has(.image-viewer[open]){overflow:hidden}
+@media(prefers-reduced-motion:reduce){.image-viewer-card img{animation:none}}
+
+
+/* Tarjetas de experiencia con halo y reflejo azul */
+#experiencia .timeline li{position:relative;overflow:hidden;isolation:isolate;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+#experiencia .timeline li::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 25%,rgba(114,153,255,.04) 40%,rgba(180,210,255,.18) 50%,transparent 66%);transform:translateX(-110%);opacity:0;transition:transform .75s ease,opacity .25s ease}
+#experiencia .timeline li:is(:hover,:active,:focus-visible){transform:translateY(-6px);border-color:#7299ff;box-shadow:0 0 0 1px #3c66fe66,0 0 20px #174bff66,0 14px 36px #174bff33,inset 0 0 25px #174bff12;outline:none}
+#experiencia .timeline li:is(:hover,:active,:focus-visible)::after{transform:translateX(110%);opacity:1}
+#experiencia .timeline li:is(:hover,:active,:focus-visible) .dot{filter:drop-shadow(0 0 7px #3c66fe)}
+@media(prefers-reduced-motion:reduce){#experiencia .timeline li,#experiencia .timeline li::after{transition:none}#experiencia .timeline li::after{display:none}#experiencia .timeline li:is(:hover,:active,:focus-visible){transform:none}}
+
+
+/* Tarjetas de proyectos con el mismo brillo de Experiencia */
+#proyectos .proj{isolation:isolate;transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease}
+#proyectos .proj::before{content:"";position:absolute;inset:0;z-index:2;border-radius:inherit;pointer-events:none;background:linear-gradient(115deg,transparent 25%,rgba(114,153,255,.04) 40%,rgba(180,210,255,.18) 50%,transparent 66%);opacity:0;background-size:250% 100%;background-position:100% 0;transition:background-position .75s ease,opacity .25s ease}
+#proyectos .proj:is(:hover,:active,:focus-within){transform:translateY(-6px);border-color:#7299ff;box-shadow:0 0 0 1px #3c66fe66,0 0 20px #174bff66,0 14px 36px #174bff33,inset 0 0 25px #174bff12}
+#proyectos .proj:is(:hover,:active,:focus-within)::before{background-position:0 0;opacity:1}
+@media(prefers-reduced-motion:reduce){#proyectos .proj,#proyectos .proj::before{transition:none}#proyectos .proj::before{display:none}#proyectos .proj:is(:hover,:active,:focus-within){transform:none}}
+
+
+/* Tarjetas estables; iluminación únicamente en Ver proyecto */
+#proyectos .proj,#proyectos .proj:is(:hover,:active,:focus-within){transform:none;border-color:#ffffff26;box-shadow:0 12px 30px #00000055}
+#proyectos .proj::before{display:none}
+#proyectos .proj:hover img{transform:none}
+#proyectos .proj .open:is(:hover,:focus-visible,:active){background:rgba(6,15,58,.85);color:#eee;border-color:#7299ff;box-shadow:0 0 0 1px #7299ff,0 0 10px #3c66feaa,0 0 24px #174bff77,inset 0 0 8px #174bff30;transform:none}
+
+/* Contacto con iluminación LED y datos centrados */
+#contacto .big{animation:editorial-led-switch 4.8s ease-in-out infinite}
+#contacto .contact-grid{grid-template-columns:repeat(3,minmax(0,1fr));text-align:center;justify-items:center;align-items:start;max-width:1320px;margin-inline:auto;gap:32px}
+#contacto .contact-grid>div{width:100%;text-align:center}
+#contacto .contact-grid a{display:inline-block;max-width:100%;overflow-wrap:anywhere}
+@media(max-width:900px){#contacto .contact-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#contacto .contact-grid>div:last-child{grid-column:1/-1}}
+@media(max-width:600px){#contacto .contact-grid{grid-template-columns:minmax(0,1fr)}#contacto .contact-grid>div:last-child{grid-column:1}}
+@media(prefers-reduced-motion:reduce){#contacto .big{animation:none;text-shadow:0 0 2px #fff,0 0 8px rgba(255,255,255,.8),0 0 20px rgba(166,195,255,.65),0 0 36px rgba(60,102,254,.4)}}
+
+
+/* Mantener el diseño del header original; solo fijar su posición */
+body > .nav{position:fixed;top:18px;left:50%;transform:translateX(-50%);z-index:1000;width:calc(100% - 48px);max-width:1440px;margin:0}
+section[id]{scroll-margin-top:110px}
+.project-detail{padding-top:124px}
+body > .nav.open{max-height:calc(100svh - 32px);overflow-y:auto}
+@media(max-width:700px){body > .nav{top:14px;width:calc(100% - 32px)}section[id]{scroll-margin-top:96px}.project-detail{padding-top:106px}}
+
+/* Textos blancos en el header fijo */
+body > .nav .nav-links a,
+body > .nav .nav-links a:is(:hover,:focus-visible,:active,[aria-current="location"]),
+body > .nav .burger{color:#fff}
+</style>
+</head>
+<body>
+<header class="nav" id="top">
+<div class="wrap">
+<a class="header-logo" href="#inicio" aria-label="MSR — Inicio"><img src="assets/img/LOGO%20MSR@300x.png" alt="MSR" width="5072" height="1459"></a>
+<button class="burger" aria-expanded="false" aria-controls="menu">Menú</button>
+<nav aria-label="Principal"><ul class="nav-links" id="menu">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#sobre-mi">Sobre mí</a></li>
+<li><a href="#educacion">Educación</a></li>
+<li><a href="#experiencia">Experiencia</a></li>
+<li><a href="#habilidades">Habilidades</a></li>
+<li><a href="#proyectos">Proyectos</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul></nav>
+</div>
+</header>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+
+<main id="contenido">
+<!-- HERO -->
+<section class="hero hero-neon-editorial" id="inicio" aria-labelledby="t-hero">
+
+<div class="wrap"><div class="neon-composition">
+<div class="neon-meta"><p>Diseño <span>Gráfico y Digital</span></p><p>Edición <span>2026</span></p></div>
+<h1 id="t-hero" class="neon-title">PORTAFOLIO</h1>
+<div class="neon-divider" aria-hidden="true"><span>★</span></div>
+<a class="btn" href="#proyectos">Explorar mi trabajo</a>
+<a class="scroll-hint" href="#sobre-mi">Desliza ↓</a>
+</div></div></section>
+
+<!-- SOBRE MÍ -->
+<section id="sobre-mi" aria-labelledby="t-about">
+<div class="wrap"><div class="about-grid">
+<div class="about-copy reveal">
+<h2 class="about-title" id="t-about"><span class="about-hello">Holaa soy</span><span class="about-first">Mireille Abigail</span><span class="about-last">Sánchez Rosales</span></h2>
+<p class="about-bio">Tengo 22 años y actualmente estoy cursando mi séptimo semestre en Diseño Gráfico y Digital en la Universidad La Salle. Me apasiona el mundo de las marcas y el desarrollo de campañas creativas. Igualmente disfruto explorar diferentes aspectos, la identidad visual, edición de fotos y la publicidad.</p>
+<div class="about-cols"><div>
+<h3 class="about-h">Estudios</h3>
+<ul class="about-list"><li>Licenciatura en Diseño Gráfico y Digital</li><li>Universidad La Salle</li></ul>
+<h3 class="about-h" style="margin-top:28px">Programas</h3>
+<ul class="prog" aria-label="Programas"><li>Ai</li><li>Ps</li><li>Id</li><li>Ae</li></ul>
+</div></div></div>
+<svg class="about-arrow" viewBox="0 0 180 90" aria-hidden="true"><path d="M8 35 Q85 -12 160 64 M140 31 L163 66 L126 69" fill="none" stroke="currentColor" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<div class="about-photo reveal">
+<img class="spin-star s1" src="assets/img/estrella%20azuul@300x.png" alt="" aria-hidden="true">
+<img class="spin-star s2" src="assets/img/estrella%20azuul@300x.png" alt="" aria-hidden="true">
+<img class="photo" src="assets/img/Mireille_1@300x.png" alt="Fotografía en blanco y negro de Mireille Abigail Sánchez Rosales">
+</div></div></div>
+<div class="qualities-marquee" aria-label="Cualidades: Adaptable, Proactiva, Aprendizaje rápido, Responsable y Trabajo en equipo">
+<div class="qualities-track" aria-hidden="true"><div class="qualities-group"><span>Adaptable</span><span class="quality-star" aria-hidden="true"></span><span>Proactiva</span><span class="quality-star" aria-hidden="true"></span><span>Aprendizaje rápido</span><span class="quality-star" aria-hidden="true"></span><span>Responsable</span><span class="quality-star" aria-hidden="true"></span><span>Trabajo en equipo</span><span class="quality-star" aria-hidden="true"></span></div><div class="qualities-group"><span>Adaptable</span><span class="quality-star" aria-hidden="true"></span><span>Proactiva</span><span class="quality-star" aria-hidden="true"></span><span>Aprendizaje rápido</span><span class="quality-star" aria-hidden="true"></span><span>Responsable</span><span class="quality-star" aria-hidden="true"></span><span>Trabajo en equipo</span><span class="quality-star" aria-hidden="true"></span></div></div></div>
+</section>
+
+<!-- EDUCACIÓN -->
+
+
+<!-- EXPERIENCIA -->
+
+
+<!-- HABILIDADES -->
+
+
+<!-- PROYECTOS -->
+
+
+<section id="habilidades" aria-labelledby="t-sk"><div class="wrap">
+<p class="eyebrow" style="color:var(--sky)">Capacidades</p>
+<h2 class="sec-title" id="t-sk">Habilidades</h2>
+<div class="skills">
+<div class="skill reveal"><div class="num">01</div><div class="cat">Identidad visual</div><div class="bar"></div></div>
+<div class="skill reveal"><div class="num">02</div><div class="cat">Publicidad</div><div class="bar"></div></div>
+<div class="skill reveal"><div class="num">03</div><div class="cat">Editorial</div><div class="bar"></div></div>
+<div class="skill reveal"><div class="num">04</div><div class="cat">Digital / 3D</div><div class="bar"></div></div>
+</div>
+
+</div></section>
+<section id="proyectos" aria-labelledby="t-proj"><div class="wrap">
+<p class="eyebrow">Portafolio</p>
+<h2 class="proj-head" id="t-proj">Mis proyectos<span class="proj-ghost" aria-hidden="true">Mis proyectos</span></h2>
+<ul class="folders" aria-label="Categorías de proyectos">
+<li><button class="folder" data-f="todos" aria-pressed="true"><span class="f-label">TODOS</span></button></li>
+<li><button class="folder" data-f="marca" aria-pressed="false"><span class="f-icon" aria-hidden="true"><span class="f-back"></span><span class="f-paper"></span><span class="f-front"></span></span><span class="f-label">Marca</span></button></li>
+<li><button class="folder" data-f="publi" aria-pressed="false"><span class="f-icon" aria-hidden="true"><span class="f-back"></span><span class="f-paper"></span><span class="f-front"></span></span><span class="f-label">Publicidad</span></button></li>
+<li><button class="folder" data-f="ed" aria-pressed="false"><span class="f-icon" aria-hidden="true"><span class="f-back"></span><span class="f-paper"></span><span class="f-front"></span></span><span class="f-label">Editorial</span></button></li>
+<li><button class="folder" data-f="3d" aria-pressed="false"><span class="f-icon" aria-hidden="true"><span class="f-back"></span><span class="f-paper"></span><span class="f-front"></span></span><span class="f-label">Modelado 3D</span></button></li>
+</ul>
+<p id="folder-count" aria-live="polite" style="font-size:14px;color:#555;margin:6px 0 4px"></p>
+<div class="proj-grid" id="grid">
+<article class="proj reveal" data-cat="marca" data-title="Bit &amp; Serif — Marca" data-desc="Este proyecto consistió en desarrollar una identidad para un festival de tipografía en el Museo Franz Mayer, basado en dos tipógrafos con estilos diferentes: Susana Licko y Porchez. La paleta cromática busca generar un contraste y, al mismo tiempo, una fusión entre ambos estilos.">
+<img src="assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%204@300x.png" alt="Bit y Serif — pieza 4" loading="lazy" data-imgs='["assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%204@300x.png", "assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%203@300x.png", "assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%205@300x.png", "assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%206@300x.png", "assets/img/MARCA/BIT%20%26%20SERIF/BIT%20%26%20SERIF%207@300x.png"]'>
+<div class="ov"><b>Bit &amp; Serif</b><small>Marca · 5 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Bit &amp; Serif · Marca</p></article>
+<article class="proj reveal" data-cat="marca" data-title="Feria del Libro — Marca" data-desc="Este proyecto consistió en realizar una identidad para una feria del libro bajo el concepto de fantasía marina. El cartel se desarrolló a partir de una fotografía transformada en ilustración, y se diseñaron artículos promocionales con el mismo estilo visual.">
+<img src="assets/img/MARCA/FERIA%20DEL%20LIBRO/CARTEL%20FERIA%20DEL%20LIBRO@300x.png" alt="Feria del Libro — cartel" loading="lazy" data-imgs='["assets/img/MARCA/FERIA%20DEL%20LIBRO/CARTEL%20FERIA%20DEL%20LIBRO@300x.png","assets/img/MARCA/FERIA%20DEL%20LIBRO/FERIA%20DEL%20LIBRO%20MERCH@300x.png","assets/img/MARCA/FERIA%20DEL%20LIBRO/FERIA%20DEL%20LIBRO%20POSTS@300x.png","assets/img/MARCA/FERIA%20DEL%20LIBRO/FERIA%20DEL%20LIBRO%20PULSERA@300x.png"]'>
+<div class="ov"><b>Feria del Libro</b><small>Marca · 4 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Feria del Libro · Marca</p></article>
+<article class="proj reveal" data-cat="marca" data-title="Laboratorios Lapi — Rediseño" data-desc="Este proyecto consistió en seleccionar un laboratorio y rediseñar su identidad a partir de sus servicios y de lo que busca transmitir. La propuesta para Laboratorios Lapi conservó el naranja de su identidad original y lo contrastó con azul para lograr un mayor impacto visual.">
+<img src="assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_1.png" alt="Laboratorios Lapi — mockup 1" loading="lazy" data-imgs='["assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_1.png","assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_2.png","assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_3.png","assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_4.png","assets/img/MARCA/Laboratorios%20Lapi-Redisen%CC%83o/lapi_5.png"]'>
+<div class="ov"><b>Laboratorios Lapi</b><small>Marca · 5 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Laboratorios Lapi · Marca</p></article>
+<article class="proj reveal" data-cat="publi" data-title="Anuncio Cloud — Ariana Grande" data-desc="Pieza publicitaria: anuncio Cloud con Ariana Grande.">
+<img src="assets/img/PUBLICIDAD/ANUNCIO%20CLOUD%20ARIANA%20GRANDE@300x.png" alt="Anuncio Cloud — Ariana Grande" loading="lazy">
+<div class="ov"><b>Cloud Ariana Grande</b><small>Publicidad</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Cloud Ariana Grande · Publicidad</p></article>
+<article class="proj reveal" data-cat="publi" data-title="Skydancers — Publicidad" data-desc="Campaña y piezas publicitarias. Objetivo: impacto juvenil. Resultado: key visual y adaptaciones.">
+<img src="assets/img/PUBLICIDAD/publi_skydancers.png" alt="Proyecto publicitario Skydancers" loading="lazy">
+<div class="ov"><b>Skydancers</b><small>Publicidad</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Skydancers · Publicidad</p></article>
+<article class="proj reveal" data-cat="ed" data-title="Artículo Generacional — Música" data-desc="Se realizó un artículo editorial sobre el impacto de la música a través de las generaciones. La paleta cromática combina tonos amarillos con negros y blancos para generar una estética vintage.">
+<img src="assets/img/EDITORIAL/ARTICULO%20GENERACIONAL%20MUSICA/ARTICULO%20GENEROS%20MU%CC%81SICA@300x.png" alt="Artículo generacional música — pliego 1" loading="lazy" data-imgs='["assets/img/EDITORIAL/ARTICULO%20GENERACIONAL%20MUSICA/ARTICULO%20GENEROS%20MU%CC%81SICA@300x.png","assets/img/EDITORIAL/ARTICULO%20GENERACIONAL%20MUSICA/ARTICULO%20GENEROS%20MU%CC%81SICA%202@300x.png","assets/img/EDITORIAL/ARTICULO%20GENERACIONAL%20MUSICA/ARTICULO%20GENEROS%20MU%CC%81SICA%203@300x.png","assets/img/EDITORIAL/ARTICULO%20GENERACIONAL%20MUSICA/ARTICULO%20GENEROS%20MU%CC%81SICA%204@300x.png"]'>
+<div class="ov"><b>Artículo Música</b><small>Editorial · 4 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Artículo Música · Editorial</p></article>
+<article class="proj reveal" data-cat="ed" data-title="Fanzine Signos Zodiacales" data-desc="El proyecto consistió en realizar un fanzine de tema libre. Elegí los signos del zodíaco para explicar en qué consiste esta temática y explorar los signos y sus personalidades.">
+<img src="assets/img/EDITORIAL/FANZINE%20SIGNOS%20ZODIACALES/FANZINE%20SIGNOS%20ZODIACALES%20@300x.png" alt="Fanzine signos zodiacales — portada" loading="lazy" data-imgs='["assets/img/EDITORIAL/FANZINE%20SIGNOS%20ZODIACALES/FANZINE%20SIGNOS%20ZODIACALES%20@300x.png","assets/img/EDITORIAL/FANZINE%20SIGNOS%20ZODIACALES/FANZINE%20SIGNOS%20ZODIACALES%202@300x.png","assets/img/EDITORIAL/FANZINE%20SIGNOS%20ZODIACALES/FANZINE%20SIGNOS%20ZODIACALES%203@300x.png","assets/img/EDITORIAL/FANZINE%20SIGNOS%20ZODIACALES/FANZINE%20SIGNOS%20ZODIACALES%204@300x.png"]'>
+<div class="ov"><b>Fanzine Zodiacal</b><small>Editorial · 4 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Fanzine Zodiacal · Editorial</p></article>
+<article class="proj reveal" data-cat="ed" data-title="Helvética — Editorial" data-desc="Se realizó un artículo editorial sobre una tipografía de elección libre. Elegí Helvética por su amplia variedad de variantes, que permitió explorar y combinar distintos pesos tipográficos.">
+<img src="assets/img/EDITORIAL/HELVETICA/HELVETICA%201@300x.png" alt="Helvética — pieza 1" loading="lazy" data-imgs='["assets/img/EDITORIAL/HELVETICA/HELVETICA%201@300x.png","assets/img/EDITORIAL/HELVETICA/HELVETICA%202@300x.png"]'>
+<div class="ov"><b>Helvética</b><small>Editorial · 2 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Helvética · Editorial</p></article>
+<article class="proj reveal" data-cat="3d" data-title="Lego City Space Stand" data-desc="Se diseñó un stand de LEGO City Space para que tanto chicos como grandes pudieran interactuar en él. Cuenta con diferentes áreas aptas para todo tipo de público. La paleta cromática utiliza tonos morados y azules para transmitir la esencia del espacio.">
+<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png" alt="Lego City Space Stand — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/LEGO%20CITY%20SPACE%20STAND%205@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE%20STAND/Recurso%2033@300x.png"]'>
+<div class="ov"><b>Space Stand</b><small>Modelado 3D · 6 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">Space Stand · Modelado 3D</p></article>
+<article class="proj reveal" data-cat="3d" data-title="Lego City Space" data-desc="A partir del stand de LEGO City Space, se realizó un personaje para crear un anuncio publicitario de un producto del mismo stand. En este caso, la paleta cromática se modificó hacia tonos azules, conservando parte de la esencia visual del proyecto anterior.">
+<img src="assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png" alt="Lego City Space — render 1" loading="lazy" data-imgs='["assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%202@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%203@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%204@300x.png","assets/img/MODELADO%203D/LEGO%20CITY%20SPACE/LEGO%20CITY%20SPACE%205@300x.png"]'>
+<div class="ov"><b>City Space</b><small>Modelado 3D · 5 piezas</small><button class="btn open" style="align-self:flex-start">Ver proyecto →</button></div>
+<p class="meta">City Space · Modelado 3D</p></article>
+</div>
+</div></section>
+<section id="educacion" aria-labelledby="t-edu"><div class="wrap reveal">
+<p class="eyebrow" style="color:var(--sky)">Formación</p>
+<h2 class="sec-title" id="t-edu">Educación</h2>
+<div class="edu-block">
+<span class="star" aria-hidden="true">★</span>
+<h3>Licenciatura en Diseño Gráfico y Digital — Universidad La Salle</h3>
+<p>Actualmente curso el séptimo semestre, desarrollando conocimientos en identidad visual, comunicación gráfica, publicidad, diseño editorial y herramientas digitales.</p>
+</div>
+</div></section>
+<section id="experiencia" aria-labelledby="t-exp"><div class="wrap">
+<p class="eyebrow">Trayectoria</p>
+<h2 class="sec-title" id="t-exp">Experiencia</h2>
+<ol class="timeline">
+<li class="reveal" tabindex="0"><span class="dot" aria-hidden="true">★</span>
+<h3>Motion Media</h3><span class="period">Actualidad · 2 meses</span>
+<p>Agencia de publicidad, experiencias de marca y producción de eventos. Desarrollo de propuestas gráficas, contenido digital, materiales publicitarios y adaptación visual para marcas y campañas.</p></li>
+<li class="reveal" tabindex="0"><span class="dot" aria-hidden="true">★</span>
+<h3>Alumni, Universidad La Salle</h3><span class="period">Servicio social</span>
+<p>Comunicación visual y materiales gráficos para la comunidad de egresados. Organización y colaboración en un entorno institucional.</p></li>
+<li class="reveal" tabindex="0"><span class="dot" aria-hidden="true">★</span>
+<h3>Legends Academy</h3><span class="period">3 meses</span>
+<p>Experiencia profesional: comunicación, responsabilidad, organización y trabajo en equipo en distintas dinámicas laborales.</p></li>
+</ol>
+</div></section>
+<!-- CONTACTO -->
+<section id="contacto" aria-labelledby="t-ct"><div class="wrap">
+<h2 class="big" id="t-ct">Contacto</h2>
+<div class="contact-divider" aria-hidden="true"><span>★</span></div>
+<div class="contact-grid">
+<div><h3>Teléfono</h3><a href="tel:+525560885629">55 6088 5629</a></div>
+<div><h3>Correo</h3><a href="mailto:miresanro16@gmail.com">miresanro16@gmail.com</a></div>
+<div><h3>Behance</h3><a href="https://www.behance.net/mirelsanchez" target="_blank" rel="noopener noreferrer">https://www.behance.net/mirelsanchez</a></div>
+</div></div></section>
+</main>
+
+
+
+<section class="project-detail" id="detalle-proyecto" aria-labelledby="detail-title" hidden>
+<a class="detail-back" href="#proyectos">← Volver a proyectos</a>
+<div class="detail-layout"><div class="detail-copy">
+<p class="detail-category" id="detail-category"></p>
+<h1 class="detail-title" id="detail-title" tabindex="-1"></h1>
+<p class="detail-description" id="detail-description"></p>
+<p class="detail-count" id="detail-count"></p>
+</div><div class="detail-gallery" id="detail-gallery" role="region" aria-label="Galería de imágenes del proyecto"></div></div>
+</section>
+
+<dialog class="image-viewer" id="image-viewer" aria-label="Imagen completa del proyecto">
+<div class="image-viewer-card"><button type="button" class="image-viewer-close" aria-label="Cerrar imagen">×</button><img id="image-viewer-img" alt=""></div>
+</dialog>
+<script>
+(function(){
+  var nav=document.querySelector('.nav'),btn=document.querySelector('.burger');
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open?'true':'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.querySelectorAll('a').forEach(function(link){link.removeAttribute('aria-current');});
+      a.setAttribute('aria-current','location');
+      nav.classList.remove('open');btn.setAttribute('aria-expanded','false');
+    });
+  });
+  // Carpetas (un apartado a la vez)
+  var fbtns=document.querySelectorAll('.folders .folder'),cards=document.querySelectorAll('.proj'),
+      count=document.getElementById('folder-count');
+  function applyFilter(f){
+    var n=0;
+    fbtns.forEach(function(x){x.setAttribute('aria-pressed',x.dataset.f===f?'true':'false')});
+    cards.forEach(function(c){
+      var show=f==='todos'||c.dataset.cat===f;c.style.display=show?'':'none';if(show)n++;
+    });
+    var label=document.querySelector('.folder[data-f="'+f+'"] .f-label').textContent;
+    count.textContent=label+': '+n+(n===1?' proyecto':' proyectos');
+  }
+  fbtns.forEach(function(b){b.addEventListener('click',function(){applyFilter(b.dataset.f);});});
+  applyFilter('todos');
+  // Vistas de proyecto dentro del mismo index; compatibles con Atrás del navegador.
+  var detail=document.getElementById('detalle-proyecto'),lastProject=null;
+  var categories={marca:'Marca',publi:'Publicidad',ed:'Editorial','3d':'Modelado 3D'};
+  cards.forEach(function(card,i){
+    card.dataset.slug='proyecto-'+(i+1);
+    var button=card.querySelector('.open');
+    button.setAttribute('aria-label','Ver proyecto: '+card.dataset.title);
+    button.addEventListener('click',function(){lastProject=button;location.hash=card.dataset.slug;});
+    card.querySelector('img').style.cursor='pointer';
+    card.querySelector('img').addEventListener('click',function(){button.click();});
+  });
+  var viewer=document.getElementById('image-viewer'),viewerImage=document.getElementById('image-viewer-img'),viewerOrigin=null;
+  function closeViewer(){viewer.close();viewerImage.removeAttribute('src');if(viewerOrigin)viewerOrigin.focus({preventScroll:true});}
+  function openViewer(frame){
+    var image=frame.querySelector('img');viewerOrigin=frame;viewerImage.src=image.src;viewerImage.alt=image.alt;
+    viewer.showModal();viewer.querySelector('button').focus({preventScroll:true});
+  }
+  document.getElementById('detail-gallery').addEventListener('click',function(e){var frame=e.target.closest('.project-piece');if(frame)openViewer(frame);});
+  document.getElementById('detail-gallery').addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.classList.contains('project-piece')){e.preventDefault();openViewer(e.target);}});
+  viewer.querySelector('button').addEventListener('click',closeViewer);
+  viewer.addEventListener('click',function(e){if(e.target===viewer||e.target.classList.contains('image-viewer-card'))closeViewer();});
+  viewer.addEventListener('cancel',function(e){e.preventDefault();closeViewer();});
+  function routeProject(){
+    var slug=location.hash.slice(1),card=Array.from(cards).find(function(c){return c.dataset.slug===slug;});
+    var wasOpen=document.body.classList.contains('project-view');
+    document.body.classList.toggle('project-view',!!card);detail.hidden=!card;
+    if(!card){
+      document.title='Mireille Abigail Sánchez Rosales — CV · Portafolio 2026';
+      if(wasOpen){document.getElementById('proyectos').scrollIntoView();if(lastProject)lastProject.focus({preventScroll:true});}
+      return;
+    }
+    var img=card.querySelector('img'),list=[img.getAttribute('src')];
+    try{var images=JSON.parse(img.dataset.imgs);if(images&&images.length)list=images;}catch(e){}
+    document.getElementById('detail-title').textContent=card.dataset.title.replace(/\s*[—–-]\s*(Marca|Publicidad|Editorial|Modelado\s*3D)\s*$/i,'');
+    document.getElementById('detail-category').textContent=categories[card.dataset.cat];
+    document.getElementById('detail-description').textContent=card.dataset.desc;
+    document.getElementById('detail-count').textContent=list.length+(list.length===1?' pieza del proyecto':' piezas del proyecto');
+    var gallery=document.getElementById('detail-gallery');gallery.replaceChildren();
+    list.forEach(function(src,i){
+      var frame=document.createElement('figure');frame.className='project-piece';frame.tabIndex=0;frame.setAttribute('role','button');frame.setAttribute('aria-label','Ver imagen completa: '+card.dataset.title+' — pieza '+(i+1));
+      var im=document.createElement('img');im.src=src;im.alt=card.dataset.title+' — pieza '+(i+1);im.loading=i?'lazy':'eager';
+      frame.appendChild(im);gallery.appendChild(frame);
+    });
+    document.title=card.dataset.title+' · Mireille Sánchez';
+    window.scrollTo(0,0);document.getElementById('detail-title').focus({preventScroll:true});
+  }
+  window.addEventListener('hashchange',routeProject);routeProject();
+  // Reveal
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+})();
+</script>
+</body>
+</html>
